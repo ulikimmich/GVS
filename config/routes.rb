@@ -1,10 +1,13 @@
 GVS::Application.routes.draw do
-  get "page/index"
+  get "pages/home"
+  get "pages/about"
+  get "pages/services"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'page#index'
+   root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
