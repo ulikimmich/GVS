@@ -1,3 +1,148 @@
 <% provide(:title, 'Home') %>
 
-Home page
+<img id="bgimg" src="gfx/hawaii15b.jpg" />
+
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#"><img src="gfx/logo.png" class="logo"></a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="film.html">Film</a></li>
+            <li><a href="#">Audio</a></li>
+            <li><a href="#">Marketing</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">University of the Nations</a></li>
+            <li><a href="#">Big Island Gigs</a></li>
+            <li><a href="#">The Film Institute</a></li>
+            <li><a href="#">GiantKiller Pictures</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><button type="button" class="btn btn-success">Log In</button></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<!-- End Nav bar -->
+
+<!-- Carousel
+  ================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="gfx/start-01.jpg" alt="First slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Film Production</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a class="btn btn-large btn-primary" href="#">View Concept Art</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gfx/film-02b.jpg" alt="Second slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Interactive Story Telling</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="gfx/film-03.jpg" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Prop Prototyping</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div><!-- /.carousel -->
+
+
+<!-- Start Main Content -->
+<div class="container">
+  <div class="content">
+    <div class="jumbotron">
+      <div class="container">
+        <h1><span style="color: #f1b428">Create</span> <span style="color: #dd0685">Connect</span> <span style="color: #008ac1">Cultivate</span></h1>
+        <p>Global Virtual Studio (GVS) is a team of content creators based on the Big Island of Hawai'i who are passionate about transforming original ideas into stories and bringing them to life.</p>
+        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+
+        <div class="thumbnail">
+          <h2>Film</h2>
+          <a href="#"><img src="gfx/teaser01.jpg" alt="..."></a>
+          <div class="caption"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-primary btn-sm" href="#">View details &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="thumbnail">
+          <h2 id="light">Audio</h2>
+          <a href="#"><img src="gfx/teaser02.jpg" alt="..."></a>
+          <div class="caption"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-primary btn-sm" href="#">View details &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="thumbnail">
+          <h2 id="light">Marketing</h2>
+          <a href="#"><img src="gfx/teaser03.jpg" alt="..."></a>
+          <div class="caption"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-primary btn-sm" href="#">View details &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Main Content -->
+
+    <!--  Start Footer -->
+
+    <footer>
+      <p>&copy; 2013 Global Virtual Studio</p>
+    </footer>
+  </div>
+  <!--  End Footer -->
+
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
