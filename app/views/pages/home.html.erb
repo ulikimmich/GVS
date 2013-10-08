@@ -1,6 +1,6 @@
 <% provide(:title, 'Home') %>
 
-<img id="bgimg" src="gfx/hawaii15b.jpg" />
+<%= image_tag "hawaii15b.jpg", id: "bgimg" %>
 
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -11,27 +11,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#"><img src="gfx/logo.png" class="logo"></a>
+      <%= link_to image_tag "logo.png", class: "logo" %>
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li class="active"><%=  link_to "Home", "#" %></li>
+        <li><%=  link_to "About Us", "#" %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="film.html">Film</a></li>
-            <li><a href="#">Audio</a></li>
-            <li><a href="#">Marketing</a></li>
+            <li><%=  link_to "Film", "#" %></li>
+            <li><%=  link_to "Audio", "#" %></li>
+            <li><%=  link_to "Marketing", "#" %></li>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">University of the Nations</a></li>
-            <li><a href="#">Big Island Gigs</a></li>
-            <li><a href="#">The Film Institute</a></li>
-            <li><a href="#">GiantKiller Pictures</a></li>
+            <li><%=  link_to "University of the Nations", "#" %></li>
+            <li><%=  link_to "Big Island Gigs", "#" %></li>
+            <li><%=  link_to "The Film Institute", "#" %></li>
+            <li><%=  link_to "GiantKiller Pictures", "#" %></li>
           </ul>
         </li>
       </ul>
@@ -54,7 +54,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="item active">
-      <img src="gfx/start-01.jpg" alt="First slide">
+      <%= image_tag "start-01.jpg", alt: "" %>
       <div class="container">
         <div class="carousel-caption">
           <h1>Film Production</h1>
@@ -64,7 +64,7 @@
       </div>
     </div>
     <div class="item">
-      <img src="gfx/film-02b.jpg" alt="Second slide">
+      <%= image_tag "film-02b.jpg", alt: "" %>
       <div class="container">
         <div class="carousel-caption">
           <h1>Interactive Story Telling</h1>
@@ -74,7 +74,7 @@
       </div>
     </div>
     <div class="item">
-      <img src="gfx/film-03.jpg" alt="Third slide">
+      <%= image_tag "film-03.jpg", alt: "" %>
       <div class="container">
         <div class="carousel-caption">
           <h1>Prop Prototyping</h1>
@@ -102,10 +102,9 @@
 
     <div class="row">
       <div class="col-lg-4">
-
         <div class="thumbnail">
           <h2>Film</h2>
-          <a href="#"><img src="gfx/teaser01.jpg" alt="..."></a>
+        <%= link_to image_tag "teaser01.jpg", alt: "" %>
           <div class="caption"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             <p><a class="btn btn-primary btn-sm" href="#">View details &raquo;</a></p>
           </div>
@@ -114,7 +113,7 @@
       <div class="col-lg-4">
         <div class="thumbnail">
           <h2 id="light">Audio</h2>
-          <a href="#"><img src="gfx/teaser02.jpg" alt="..."></a>
+          <%= link_to image_tag "teaser02.jpg", alt: "" %>
           <div class="caption"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             <p><a class="btn btn-primary btn-sm" href="#">View details &raquo;</a></p>
           </div>
@@ -123,7 +122,7 @@
       <div class="col-lg-4">
         <div class="thumbnail">
           <h2 id="light">Marketing</h2>
-          <a href="#"><img src="gfx/teaser03.jpg" alt="..."></a>
+          <%= link_to image_tag "teaser03.jpg", alt: "" %>
           <div class="caption"><p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
             <p><a class="btn btn-primary btn-sm" href="#">View details &raquo;</a></p>
           </div>
@@ -139,10 +138,4 @@
     </footer>
   </div>
   <!--  End Footer -->
-
-
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+</div>
