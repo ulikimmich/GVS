@@ -10,9 +10,25 @@
   <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+    <%= image_tag "hawaii15b.jpg", id: "bgimg" %>
     <%= render 'layouts/navbar' %>
+    <%= yield :carousel %>
+
+    <div class="container">
+      <div class="content">
+
+        <% flash.each do |key, value| %>
+            <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
 
         <%= yield %>
 
+        <%= render "layouts/footer" %>
+
+        <%= debug(params) if Rails.env.development? %>
+
+      </div>
+    </div>
 </body>
 </html>
