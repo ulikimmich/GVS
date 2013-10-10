@@ -1,12 +1,9 @@
 <% provide(:title, 'Home') %>
+<% content_for :carousel do %>
+    <%= render 'layouts/homecarousel' %>
+<% end %>
 
-<%= image_tag "hawaii15b.jpg", id: "bgimg" %>
 
-<%= render 'layouts/carousel' %>
-
-<!-- Start Main Content -->
-<div class="container">
-  <div class="content">
     <div class="jumbotron">
       <div class="container">
         <h1><span style="color: #f1b428">Create</span> <span style="color: #dd0685">Connect</span> <span style="color: #008ac1">Cultivate</span></h1>
@@ -46,7 +43,3 @@
     </div>
     <!-- End Main Content -->
 
-    <%= render "layouts/footer" %>
-
-  </div>
-</div>

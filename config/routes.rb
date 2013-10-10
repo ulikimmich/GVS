@@ -1,6 +1,6 @@
 GVS::Application.routes.draw do
 
-  get 'users/new'
+  resources :users
 
   match '/signup', to: 'users#new', via: 'get'
   match '/about', to: 'pages#about', via: 'get'

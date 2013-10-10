@@ -1,12 +1,9 @@
 <% provide(:title, 'Film') %>
+<% content_for :carousel do %>
+    <%= render 'layouts/filmcarousel' %>
+<% end %>
 
-<%= image_tag "hawaii15b.jpg", id: "bgimg" %>
 
-<%= render 'layouts/carousel' %>
-
-<!-- Start Main Content -->
-<div class="container">
-  <div class="content">
 
     <div class="page-header" id="whiteBg">
       <h1>Film<br /><small>Why we do things? What we do? How we do it? Where we are at?</small></h1>
@@ -109,8 +106,3 @@
 
     <!-- End Main Content -->
 
-
-    <%= render "layouts/footer" %>
-
-  </div>
-</div>
