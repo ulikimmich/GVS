@@ -2,11 +2,11 @@ GVS::Application.routes.draw do
 
   resources :users
 
+  match '/login', to:'users#login', via: 'get'
   match '/signup', to: 'users#new', via: 'get'
   match '/about', to: 'pages#about', via: 'get'
-  match '/film', to: 'pages#film', via: 'get'
-  match '/audiopage', to: 'pages#audiopage', via: 'get'
-  match '/marketing', to: 'pages#marketing', via: 'get'
+  match '/services', to: 'pages#services', via: 'get'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,11 +8,4 @@ class PagesController < ApplicationController
   def services
   end
 
-  def film
-
-  end
-
-  def audiopage
-
-  end
 end
