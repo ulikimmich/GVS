@@ -1,0 +1,27 @@
+<% provide(:title, 'Contact us') %>
+
+<h1>Contact Us</h1>
+
+<div class="row" id="rowspacer">
+  <div class="col-lg-5">
+
+    <%= form_tag(action: 'sendmail', method: 'get') do %>
+        <%= render 'shared/error_messages' %>
+        <div class="form-group">
+          <%= label_tag() %>
+          <%= text_field :name, :class => "form-control", :placeholder => "Enter name" %>
+
+        </div>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.text_field :email, :class => "form-control", :placeholder => "Enter email" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :message, "Message" %>
+          <%= f.text_area :message, :class => "form-control", :placeholder => "" %>
+        </div>
+        <%= f.submit "Send", class: "btn btn-large btn-success" %>
+    <% end %>
+
+  </div>
+</div>
