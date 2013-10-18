@@ -11,6 +11,9 @@ GVS::Application.routes.draw do
   match '/partners', to: 'pages#partners', via: 'get'
   match '/contact', to: 'pages#contact', via: 'get'
 
+  match "dispatch_email", to: "pages#dispatch_email",
+        as: "dispatch_email", via: :post
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
