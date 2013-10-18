@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def services
   end
 
+  def partners
+
+  end
+
 end

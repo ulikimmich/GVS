@@ -8,6 +8,7 @@ GVS::Application.routes.draw do
   match '/signup', to: 'users#new', via: 'get'
   match '/about', to: 'pages#about', via: 'get'
   match '/services', to: 'pages#services', via: 'get'
+  match '/partners', to: 'pages#partners', via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
