@@ -23,5 +23,19 @@ module GVS
     config.assets.paths << "#{Rails}/app/assets/fonts"
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
+    config.action_mailer.smtp_settings = {
+        :address              => "smtp.gmail.com",
+        :port                 => 587,
+        :domain               => "globalvirtualstudio.com",
+        :user_name            => "uli@globalvirtualstudio.com",
+        :password             => "kimchi06",
+        :authentication       => :plain,
+        :enable_starttls_auto => true
+    }
+
+    config.action_mailer.default_url_options = {
+        :host => "globalvirtualstudio.com"
+    }
+
   end
 end
