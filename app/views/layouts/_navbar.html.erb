@@ -13,7 +13,20 @@
       <ul class="nav navbar-nav">
         <li class="<%= current_page?(root_path) ? "active" : "" %>"><%=  link_to "Home", root_path %></li>
         <li class="<%= current_page?(about_path) ? "active" : "" %>"><%=  link_to "About Us", about_path %></li>
-        <li class="<%= current_page?(services_path) ? "active" : "" %>"><%=  link_to "Services", services_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li class="<%= current_page?(concept_path) ? "active" : "" %>"><%=  link_to "Concept Art", concept_path %></li>
+            <li class="<%= current_page?(previz_path) ? "active" : "" %>"><%=  link_to "Previz", previz_path %></li>
+            <li class="<%= current_page?(vfx_path) ? "active" : "" %>"><%=  link_to "VFX Animation", vfx_path %></li>
+            <li class="<%= current_page?(character_path) ? "active" : "" %>"><%=  link_to "Character Dev.", character_path %></li>
+            <li class="<%= current_page?(storyboard_path) ? "active" : "" %>"><%=  link_to "Storyboard", storyboard_path %></li>
+            <li class="<%= current_page?(props_path) ? "active" : "" %>"><%=  link_to "Props", props_path %></li>
+            <li class="divider"></li>
+            <li class="<%= current_page?(filmaudio_path) ? "active" : "" %>"><%=  link_to "Audio for Film", filmaudio_path %></li>
+            <li class="<%= current_page?(marketing_path) ? "active" : "" %>"><%=  link_to "Marketing", marketing_path %></li>
+          </ul>
+        </li>
         <li class="<%= current_page?(partners_path) ? "active" : "" %>"><%=  link_to "Partners", partners_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

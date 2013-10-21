@@ -1,0 +1,30 @@
+<% provide(:title, 'VFX') %>
+<% content_for :carousel do %>
+    <%= render 'layouts/servicescarousel' %>
+<% end %>
+
+<div class="page-header" id="whiteBg">
+  <h1>Character Development<br /><small>Some subtitle...</small></h1>
+  <p id="rowspacer"></p>
+  <p>Some cool copy...</p>
+
+  <div class="row" id="rowspacer">
+    <h3 id="leftHeaderMargin">Sample Work</h3>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-01.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-02.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-03.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-04.jpg', class: 'thumbnail'), '#' %>
+    </div>
+  </div>
+</div>
+
+
+<!-- End Main Content -->
+

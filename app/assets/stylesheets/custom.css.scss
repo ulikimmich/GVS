@@ -14,17 +14,17 @@ body {
 
 .thumbnail h2 {
   margin-top: 3px;
-  margin-left: 5px;
 }
 
-.row h3, h2{
-  margin-left: 17px;
-}
 
 #bgimg {
   position:fixed;
   z-index: -1;
   margin-top: -20px;
+}
+
+#leftHeaderMargin {
+  margin-left: 15px
 }
 
 .float { float:left; width:350px; height:200px; background:white; margin:12px; padding:10px; }
