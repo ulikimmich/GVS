@@ -10,7 +10,7 @@ class ContactController < ApplicationController
 
     if @message.valid?
       UserMailer.new_message(@message).deliver
-      flash.now[:success] = "Email was successfully sent."
+      flash[:success] = "Email was successfully sent."
       redirect_to contact_path
     else
       flash.now[:danger] = "Please enter your name and a valid email address."
