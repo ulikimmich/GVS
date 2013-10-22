@@ -1,6 +1,7 @@
 <% provide(:title, 'VFX') %>
+<% provide(:carouselimg, 'c_services01.jpg') %>
 <% content_for :carousel do %>
-    <%= render 'layouts/servicescarousel' %>
+    <%= render 'layouts/carousel' %>
 <% end %>
 
 <div class="page-header" id="whiteBg">
@@ -21,6 +22,21 @@
     </div>
     <div class="col-sm-6 col-md-3">
       <%= link_to image_tag('story/story-04.jpg', class: 'thumbnail'), '#' %>
+    </div>
+  </div>
+
+  <div class="row" id="rowspacer">
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-05.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-06.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-07.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-08.jpg', class: 'thumbnail'), '#' %>
     </div>
   </div>
 </div>
