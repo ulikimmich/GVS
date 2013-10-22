@@ -14,7 +14,7 @@ class ContactController < ApplicationController
       render :new
     else
       flash.now[:danger] = "Please enter your name and a valid email address."
-      render :new
+      redirect_to contact_path
     end
   end
 
