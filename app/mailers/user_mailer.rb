@@ -1,7 +1,7 @@
 class UserMailer < ActionMailer::Base
 
   default :from => "noreply@globalvirtualstudio.com"
-  default :to => "uli@globalvirtualstudio.com"
+  default :to => "noreply@globalvirtualstudio.com"
 
   def new_message(message)
     @message = message
