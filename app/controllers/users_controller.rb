@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
 
-  before_action :signed_in_user, only: [ :edit, :update ]
+  before_action :signed_in_user, only: [ :index, :edit, :update, :destroy ]
+  before_action :correct_user, only: [:edit, :update ]
+  before_action :admin_user,     only: :destroy
+
+  def index
+    @users = User.paginate(page: params[:page], :per_page   => 10,)
+  end
 
   def new
     @user = User.new
@@ -23,11 +29,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+
   end
 
   def update
-    @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       flash[:success] = "Profile successfully updated."
       redirect_to @user
@@ -36,11 +41,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted."
+    redirect_to users_url
+  end
+
 
   private
 
     #Strong parameters against mass assignments.
-    #Allows us to specify params that are requiered and those that are permitted
+    #Allows us to specify params that are required and those that are permitted
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation)
@@ -48,8 +59,20 @@ class UsersController < ApplicationController
 
     def signed_in_user
       unless signed_in?
+        store_location
         flash[:warning] = "Please sign in"
         redirect_to signin_url
       end
     end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_path) unless current_user?(@user)
+    end
+
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
+
 end
