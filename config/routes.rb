@@ -2,14 +2,25 @@ GVS::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
+  resources :contact, :only => [:new, :create]
 
   match '/signin', to:'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/signup', to: 'users#new', via: 'get'
   match '/about', to: 'pages#about', via: 'get'
   match '/services', to: 'pages#services', via: 'get'
+  match '/concept', to: 'pages#concept', via: 'get'
+  match '/previz', to: 'pages#previz', via: 'get'
+  match '/vfx', to: 'pages#vfx', via: 'get'
+  match '/character', to: 'pages#character', via: 'get'
+  match '/storyboard', to: 'pages#storyboard', via: 'get'
+  match '/props', to: 'pages#props', via: 'get'
+  match '/filmaudio', to: 'pages#filmaudio', via: 'get'
+  match '/marketing', to: 'pages#marketing', via: 'get'
   match '/partners', to: 'pages#partners', via: 'get'
-  match '/contact', to: 'pages#contact', via: 'get'
+  match '/contact', to: 'contact#new', :via => :get
+  match '/contact', to: 'contact#create', :via => :post
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

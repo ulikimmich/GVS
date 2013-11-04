@@ -1,5 +1,12 @@
 class User < ActiveRecord::Base
 
+  has_many :microposts
+  has_one :discipline
+  has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "50x50>" }, :default_url => ":style/default.png"
+
+  geocoded_by :create_address
+
+  after_validation :geocode, :if => :city_changed?
   before_save { self.email = email.downcase }
   before_create :create_remember_token
 
@@ -18,6 +25,10 @@ class User < ActiveRecord::Base
 
   def User.encrypt(token)
     Digest::SHA1.hexdigest(token.to_s)
+  end
+
+  def create_address
+    "#{city}, #{state}"
   end
 
   private

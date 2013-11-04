@@ -1,0 +1,46 @@
+<% provide(:title, 'VFX') %>
+<% provide(:carouselimg, 'c_services01.jpg') %>
+<% content_for :carousel do %>
+    <%= render 'layouts/carousel' %>
+<% end %>
+
+<div class="page-header" id="whiteBg">
+  <h1>Character Development</h1>
+  <h4>GVS creates a team of specialized storyteller to develop characters and refine stories. Script consultations; Business and Marketing plans - we have experts that can assist in every area of your transmedia project
+  </h4>
+
+  <div class="row" id="rowspacer">
+    <h3 id="leftHeaderMargin">Sample Work</h3>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-01.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-02.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-03.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-04.jpg', class: 'thumbnail'), '#' %>
+    </div>
+  </div>
+
+  <div class="row" id="rowspacer">
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-05.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-06.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-07.jpg', class: 'thumbnail'), '#' %>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <%= link_to image_tag('story/story-08.jpg', class: 'thumbnail'), '#' %>
+    </div>
+  </div>
+</div>
+
+
+<!-- End Main Content -->
+

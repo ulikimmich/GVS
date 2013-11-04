@@ -1,0 +1,49 @@
+<% provide(:title, 'All users') %>
+
+<h1>All Artists</h1>
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 1000px; height: 400px;'></div>
+</div>
+
+<script>
+
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers([
+            {
+                "lat": 30,
+                "lng": 0,
+                "picture": {
+                    "url": "https://addons.cdn.mozilla.net/img/uploads/addon_icons/13/13028-64.png",
+                    "width":  36,
+                    "height": 36
+                },
+                "infowindow": "hello!"
+            }
+        ]);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+    });
+
+
+    markers = handler.addMarkers(<%=raw @hash.to_json %>);
+</script>
+
+
+<div class="row">
+  <% @users.each do |user|%>
+      <div class="col-md-3 col-sm-3" id="rowspacer">
+        <div class="thumbnail thumbindex">
+          <%= link_to image_tag(user.avatar.url(:thumb), class: "thumbnailindex"), user %>
+          <strong><%= link_to user.name, user %></strong><br /><small><%= user.country %></small>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+<%= @hash.to_json %>
+
+
+
+<%= will_paginate %>

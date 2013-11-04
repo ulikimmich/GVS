@@ -6,6 +6,12 @@ ruby '2.0.0'
 gem 'rails', '4.0.0'
 gem 'pg', '0.15.1'
 gem 'bcrypt-ruby', '3.0.1'
+gem 'faker'
+gem 'will_paginate', '3.0.4'
+gem 'will_paginate-bootstrap'
+gem "paperclip", "~> 3.0"
+gem 'gmaps4rails'
+gem 'geocoder'
 
 # Use sqlite3 as the database for Active Record
 group :development do

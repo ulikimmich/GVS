@@ -22,10 +22,41 @@
         <%= f.label :password_confirmation, "Confirm Password" %>
           <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Retype password" %>
         </div>
+
+        <div class="form-group">
+          <%= f.label "Profile Photo" %>
+          <%= f.file_field :avatar %>
+        </div>
+        <hr>
+        <div class="form-group">
+          <%= f.label :phone %>
+          <%= f.text_field :phone, :class => "form-control", :placeholder => "Enter phone" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :address %>
+          <%= f.text_field :address, :class => "form-control", :placeholder => "Enter address" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :zipcode %>
+          <%= f.text_field :zipcode, :class => "form-control", :placeholder => "Enter zip code" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :city %>
+          <%= f.text_field :city, :class => "form-control", :placeholder => "Enter city" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :state %>
+          <%= f.text_field :state, :class => "form-control", :placeholder => "Enter state" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :country %>
+          <%= f.text_field :country, :class => "form-control", :placeholder => "Enter country" %>
+        </div>
+
+        <br>
         <%= f.submit "Save changes", class: "btn btn-large btn-success" %>
     <% end %>
-    <div id="rowspacer"></div>
-    <%= gravatar_for @user %>
-    <a href="http://gravatar.com/emails">change</a>
+
   </div>
 </div>
