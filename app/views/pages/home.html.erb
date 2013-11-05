@@ -7,8 +7,17 @@
     <div class="jumbotron">
       <div class="container">
         <h1>Film and Transmedia Studio</h1>
-        <p>Global Virtual Studio (GVS) is a team of content creators based on the Big Island of Hawai'i who are passionate about transforming original ideas into stories and bringing them to life.</p>
-        <p><%= link_to "Learn more &raquo;".html_safe, about_path, class: "btn btn-success btn-lg" %></p>
+              <div class="row" id="rowspacer">
+                <div class="col-sm-6">
+                  <div class="videoWrapper" style="margin: 0 auto">
+                    <iframe allowfullscreen="" src="http://player.vimeo.com/video/76922198" frameborder="0" width="500" height="281"></iframe>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <p>Global Virtual Studio (GVS) is a team of content creators based on the Big Island of Hawai'i who are passionate about transforming original ideas into stories and bringing                        them to life.</p>
+                  <p id="rowspacer"><%= link_to "Learn more &raquo;".html_safe, about_path, class: "btn btn-success btn-lg" %></p>
+                </div>
+              </div>
       </div>
     </div>
 
