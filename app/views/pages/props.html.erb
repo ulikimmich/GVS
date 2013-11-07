@@ -1,3 +1,9 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+
 <% provide(:title, 'VFX') %>
 <% provide(:carouselimg, 'props_carousel.jpg') %>
 <% content_for :carousel do %>
@@ -12,16 +18,16 @@
   <div class="row" id="rowspacer">
     <h3 id="leftHeaderMargin">Projects</h3>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('props/props-01.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/props/props-01.jpg"><img src="/assets/props/props-01.jpg" class="thumbnail"></a>
     </div>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('props/props-02.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/props/props-02.jpg"><img src="/assets/props/props-02.jpg" class="thumbnail"></a>
     </div>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('props/props-03.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/props/props-03.jpg"><img src="/assets/props/props-03.jpg" class="thumbnail"></a>
     </div>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('props/props-04.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/props/props-04.jpg"><img src="/assets/props/props-04.jpg" class="thumbnail"></a>
     </div>
   </div>
 </div>

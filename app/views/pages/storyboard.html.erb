@@ -1,3 +1,9 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+
 <% provide(:title, 'VFX') %>
 <% provide(:carouselimg, 'storyboard_carousel.jpg') %>
 <% content_for :carousel do %>
@@ -13,16 +19,16 @@
   <div class="row" id="rowspacer">
     <h3 id="leftHeaderMargin">Projects</h3>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('board/board-01.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/board/board-01.jpg"><img src="/assets/board/board-01.jpg" class="thumbnail"></a>
     </div>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('board/board-02.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/board/board-02.jpg"><img src="/assets/board/board-02.jpg" class="thumbnail"></a>
     </div>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('board/board-03.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/board/board-03.jpg"><img src="/assets/board/board-03.jpg" class="thumbnail"></a>
     </div>
     <div class="col-sm-6 col-md-3">
-      <%= link_to image_tag('board/board-04.jpg', class: 'thumbnail'), '#' %>
+        <a class="fancybox" rel="group" href="/assets/board/board-04.jpg"><img src="/assets/board/board-04.jpg" class="thumbnail"></a>
     </div>
   </div>
 
