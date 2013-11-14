@@ -18,6 +18,11 @@ h3 {
 .dropdown-menu > li > a:hover{
  background-color: #6c6c6c;
 }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #6c6c6c;
+}
+
 .thumbnail h2 {
   margin-top: 3px;
 }
