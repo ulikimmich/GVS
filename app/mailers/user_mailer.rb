@@ -1,19 +1,11 @@
 class UserMailer < ActionMailer::Base
   default from: "no-reply@globalvirtualstudio.com"
 
-  attr_accessor :name, :email, :message
+  attr_accessor :name, :email, :body
 
-  def send_email(user_info)
-    @user_info = user_info
-
-    mail(
-        to: "uli@globalvirtualstudio.com",
-        subject: "GVS Contact Form Message",
-        from: "no-reply@globalvirtualstudio.com",
-        date: Time.now,
-        content_type: "text/html"
-    )
+  def new_message(message)
+    @message = message
+    mail(:subject => "Message from GVS Contact Form")
   end
-
 
 end
