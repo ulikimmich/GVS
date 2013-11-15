@@ -11,15 +11,12 @@ class UsersController < ApplicationController
 
       marker.lat user.latitude
       marker.lng user.longitude
-
-      #marker.infowindow render_to_string(:partial => "/users/my_template", :locals => { :object => user})
+      marker.infowindow render_to_string(:partial => "infoWindow", :locals => { :user => user})
     end
-
   end
 
   def new
     @user = User.new
-
   end
 
   def show

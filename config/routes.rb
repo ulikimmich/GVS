@@ -8,7 +8,6 @@ GVS::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/signup', to: 'users#new', via: 'get'
   match '/about', to: 'pages#about', via: 'get'
-  match '/services', to: 'pages#services', via: 'get'
   match '/concept', to: 'pages#concept', via: 'get'
   match '/previz', to: 'pages#previz', via: 'get'
   match '/vfx', to: 'pages#vfx', via: 'get'
@@ -16,8 +15,8 @@ GVS::Application.routes.draw do
   match '/storyboard', to: 'pages#storyboard', via: 'get'
   match '/props', to: 'pages#props', via: 'get'
   match '/filmaudio', to: 'pages#filmaudio', via: 'get'
-  match '/marketing', to: 'pages#marketing', via: 'get'
   match '/partners', to: 'pages#partners', via: 'get'
+  match '/development', to: 'pages#development', via: 'get'
   match '/contact', to: 'contact#new', :via => :get
   match '/contact', to: 'contact#create', :via => :post
 

@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def about
   end
 
-  def services
+  def development
   end
 
   def partners
@@ -37,10 +37,6 @@ class PagesController < ApplicationController
   end
 
   def filmaudio
-
-  end
-
-  def marketing
 
   end
 
