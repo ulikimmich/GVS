@@ -1,5 +1,6 @@
 class UserMailer < ActionMailer::Base
   default from: "no-reply@globalvirtualstudio.com"
+  default to: "noreply@globalvirtualstudio.com"
 
   attr_accessor :name, :email, :body
 
