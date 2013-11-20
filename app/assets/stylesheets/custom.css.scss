@@ -12,8 +12,15 @@ h3 {
 	color: #666666;
 }
 
+a img:hover {
+  border-color: #808080;
+}
+
 #noBold {
   font-weight: normal;
+}
+#deleteUser {
+  color: #ff0000;
 }
 
 .navbar-right .btn-success {

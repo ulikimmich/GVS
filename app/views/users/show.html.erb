@@ -2,6 +2,6 @@
 
 <div class="jumbotron" style="margin-top: -80px">
         <%= image_tag(@user.avatar.url(:medium), size: "150", class: "avatar") %>
-        <h2><strong><%= @user.name %></strong></h2>
-        <p><%= @user.city %>, <%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
+        <h2><strong><%= @user.name %> </strong><code style="font-size: .5em"><%= @user.admin %></code></h2>
+        <p><%= @user.city %><% unless !@user.city %>, <% end %><%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
 </div>
