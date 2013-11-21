@@ -25,10 +25,6 @@
             <%= f.label :password_confirmation, "Confirmation" %>
             <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Retype password" %>
             </div>
-            <div class="form-group">
-              <%= f.label "Profile Photo" %>
-              <%= f.file_field :avatar %>
-            </div>
             <br>
             <%= f.submit "Create my account", class: "btn btn-large btn-success" %>
         <% end %>

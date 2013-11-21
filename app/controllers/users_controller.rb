@@ -61,8 +61,9 @@ class UsersController < ApplicationController
     #Allows us to specify params that are required and those that are permitted
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation,
-                                    :avatar, :phone, :address, :city, :zipcode, :state, :country)
+                                  :password_confirmation,
+                                  :avatar, :phone, :address, :city, :zipcode, :state, :country, :skype,
+                                  :creative_platform_profile, :website, :status)
     end
 
     def signed_in_user
