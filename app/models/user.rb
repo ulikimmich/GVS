@@ -4,9 +4,7 @@ class User < ActiveRecord::Base
   has_one :discipline
 
   has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "50x50>" },
-                    :default_url => ":style/default.png",
-                    :url => "/assets/:attachment/:id/:style/:basename.:extension",
-                    :path => ":rails_root/public/assets/:attachment/:id/:style/:basename.:extension"
+                    :default_url => ":style/default.png"
 
   #validates_attachment :content_type => { :content_type => ['image/jpeg', 'image/png'] },
   #                     :size => { :in => 0..1.megabytes }

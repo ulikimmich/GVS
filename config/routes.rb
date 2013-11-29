@@ -15,6 +15,7 @@ GVS::Application.routes.draw do
   match '/storyboard', to: 'pages#storyboard', via: 'get'
   match '/props', to: 'pages#props', via: 'get'
   match '/filmaudio', to: 'pages#filmaudio', via: 'get'
+  match '/editorial', to: 'pages#editorial', via: 'get'
   match '/partners', to: 'pages#partners', via: 'get'
   match '/development', to: 'pages#development', via: 'get'
   match '/contact', to: 'contact#new', :via => :get

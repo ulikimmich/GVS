@@ -5,7 +5,7 @@
     <div class="col-md-8">
         <%= image_tag(@user.avatar.url(:medium), size: "150", class: "avatar") %>
         <h2><strong><%= @user.name %> </strong><code style="font-size: .5em"><%= @user.status %></code></h2>
-        <p><%= @user.city %><% unless !@user.city %>, <% end %><%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
+        <p><%= @user.city %><%= @user.city.nil? || @user.city.empty? ? " " : "," %><%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
     </div>
     <div class="col-md-4 well" id="profileSidebar">
       <p>
@@ -15,7 +15,7 @@
           Skype: <strong><%= @user.skype %></strong><br />
           Website: <strong>
         <% if !@user.creative_platform_profile.nil? %>
-            <%= link_to @user.website, @user.website.scan(/^http/) ? "http://#{ @user.website }" : @user.website %>
+            <%= link_to @user.website, @user.website.scan(/^http:/) ? @user.website : "http://#{ @user.website }"%>
         <% end%></strong><br />
           CP: <strong>
         <% if !@user.creative_platform_profile.nil? %>

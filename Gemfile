@@ -12,6 +12,7 @@ gem 'will_paginate-bootstrap'
 gem "paperclip", "~> 3.0"
 gem 'gmaps4rails'
 gem 'geocoder'
+gem 'aws-sdk'
 
 # Use sqlite3 as the database for Active Record
 group :development do
