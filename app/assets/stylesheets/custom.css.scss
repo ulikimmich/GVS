@@ -10,13 +10,26 @@ body {
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
+h2 {
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 38px;
+}
+
+h1 {
+  @extend h2;
+  font-weight: 400;
+}
 
 h3 {
 	color: #666666;
 }
+.nav {
+  font-size: 16px;
+}
 
 a img:hover {
-  border-color: #808080;
+  border-color: #a3a3a3;
 }
 
 #noBold {
