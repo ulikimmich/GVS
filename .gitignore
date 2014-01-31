@@ -26,4 +26,4 @@ doc/
 .secret
 
 # Ignore AWS keys
-/config/initializers/env.rb
+env.rb
