@@ -1,0 +1,27 @@
+<h1>Listing acc_applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acc_applications.each do |acc_application| %>
+      <tr>
+        <td><%= acc_application.id %></td>
+        <td><%= acc_application.appform_field_1 %></td>
+        <td><%= link_to 'Show', acc_application %></td>
+        <td><%= link_to 'Edit', edit_acc_application_path(acc_application) %></td>
+        <td><%= link_to 'Destroy', acc_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acc application', new_acc_application_path %>

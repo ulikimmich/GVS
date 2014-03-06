@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131120211226) do
+ActiveRecord::Schema.define(version: 20140304013318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "acc_applications", force: true do |t|
+    t.text     "appform_field_1"
+    t.text     "appform_field_2"
+    t.text     "appform_field_3"
+    t.text     "appform_field_4"
+    t.text     "appform_field_5"
+    t.text     "appform_field_6"
+    t.text     "appform_field_7"
+    t.text     "appform_field_8"
+    t.text     "appform_field_9"
+    t.text     "appform_field_10"
+    t.text     "appform_field_11"
+    t.text     "appform_field_12"
+    t.text     "appform_field_13"
+    t.text     "appform_field_14"
+    t.text     "appform_field_15"
+    t.text     "appform_field_16"
+    t.text     "appform_field_17"
+    t.text     "appform_field_18"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "disciplines", force: true do |t|
     t.string   "name"

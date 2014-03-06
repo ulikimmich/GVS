@@ -1,0 +1,65 @@
+<% provide(:title, 'GVS Accelerator | Application form') %>
+
+<%= form_for @acc_application, :html => { :multipart => true } do |f| %>
+  <% if @acc_application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@acc_application.errors.count, "error") %> prohibited this acc_application from being saved:</h2>
+
+      <ul>
+      <% @acc_application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="row well" id="rowspacer">
+      <div class="col-md-10">
+        <div class="form-group">
+          <%= f.label(:appform_field_1, 'What is the name of your company?') %>
+          <%= f.text_field :appform_field_1, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_2, 'Please describe your business in 140 characters or less.') %>
+          <%= f.text_area :appform_field_2, :class => "form-control", :cols => 40, :rows => 2 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_3, "In more detail, what will your company do or make? What's new, interesting, or different about what your company will do?
+              Please provide a short synopsis of content/story of each company product.") %>
+          <%= f.text_area :appform_field_3, :class => "form-control", :cols => 40, :rows => 5 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_4, 'What is your company website URL?') %>
+          <%= f.text_field :appform_field_4, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_5, 'Please provide a video < 3 minutes long which best describes your business. Production value is not important to us, it can be quick and dirty.') %>
+          <%= f.text_field :appform_field_5, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_6, 'Please provide a video < 3 minutes long which best describes your team. Production value is not important to us, it can be quick and dirty.') %>
+          <%= f.text_field :appform_field_6, :class => "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_7, "Please tell us about each founder and their role. Explain how you met and how long you've been working together. Please be thorough because we place a great deal of importance on the team.") %>
+          <%= f.text_area :appform_field_7, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_8, "Explain how the company will make money.") %>
+          <%= f.text_area :appform_field_8, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_9, "Please provide information on current or likely competitors. Include key differentiators. Please include URLs.") %>
+          <%= f.text_area :appform_field_9, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_10, "What are some things that the team (or its members) have built in the past? Please include URLs.") %>
+          <%= f.text_area :appform_field_10, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+      </div>
+     </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

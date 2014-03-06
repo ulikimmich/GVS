@@ -1,5 +1,7 @@
 GVS::Application.routes.draw do
 
+  resources :acc_applications
+
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
   resources :contact, :only => [:new, :create]
