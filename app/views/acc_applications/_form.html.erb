@@ -30,7 +30,7 @@
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_4, '4. What is your company website URL? (i.e. http://www.yourcompany.com)') %>
-          <%= f.text_field :appform_field_4, :class => "form-control" %>
+          <%= f.text_field :appform_field_4, :class => "form-control", :placeholder => "http://www.yourcompany.com" %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_5, '5. Please provide a video (Vimeo, Youtube URL) < 3 minutes long which best describes your business. Production value is not important to us, it can be quick and dirty. If a password or other information is needed to access the video, please add it here.') %>
@@ -93,7 +93,7 @@
      </div>
 
   <div class="actions">
-    <%= f.submit "Send New Application", class: "btn btn-large btn-success" %>
+    <%= f.submit "Submit Application", class: "btn btn-large btn-success" %>
 
   </div>
 <% end %>

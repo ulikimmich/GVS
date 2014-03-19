@@ -1,6 +1,9 @@
 class AccApplication < ActiveRecord::Base
-  belongs_to :user
 
+  belongs_to :user
+  default_scope -> { order('created_at DESC') }
+
+  validates :user_id, presence: true
   validates :appform_field_1, :appform_field_2, :appform_field_3, :appform_field_5,
             :appform_field_6, :appform_field_7, :appform_field_8, :appform_field_9, :appform_field_10,
             :appform_field_11, :appform_field_12, :appform_field_13, :appform_field_14, :appform_field_15,

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action :signed_in_user,  only: [ :edit, :update, :destroy ]
-  before_action :correct_user,    only: [ :edit, :update ]
+  before_action :correct_user,    only: [ :edit, :show, :update ]
   before_action :admin_user,      only: [ :index, :destroy]
 
   def index
@@ -21,14 +21,18 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @acc_application = @user.acc_application
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      sign_in_ @user
+      sign_in @user
       flash[:success] = "Sign up successful."
-      redirect_to @user
+      #redirect_to @user
+
+      # after signup go to application form
+      redirect_to new_acc_application_path
     else
       render 'new'
     end
@@ -57,21 +61,13 @@ class UsersController < ApplicationController
 
   private
 
-    #Strong parameters against mass assignments.
-    #Allows us to specify params that are required and those that are permitted
+    # Strong parameters against mass assignments.
+    # Allows us to specify params that are required and those that are permitted
     def user_params
       params.require(:user).permit(:name, :email, :password,
                                   :password_confirmation,
                                   :avatar, :phone, :address, :city, :zipcode, :state, :country, :skype,
                                   :creative_platform_profile, :website, :status)
-    end
-
-    def signed_in_user
-      unless signed_in?
-        store_location
-        flash[:warning] = "Please sign in"
-        redirect_to signin_url
-      end
     end
 
     def correct_user

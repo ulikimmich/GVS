@@ -1,0 +1,5 @@
+<% if current_user.admin? %>
+    <%= link_to '<span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;Back to Listing'.html_safe, acc_applications_path, class: "btn btn-sm btn-primary" %> |
+    <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit Application'.html_safe, edit_acc_application_path(@acc_application), class: "btn btn-sm btn-primary" %>
+    <br><br>
+<% end %>

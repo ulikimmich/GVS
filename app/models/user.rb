@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  has_many :microposts
+  has_many :microposts, dependent: :destroy
   has_one :discipline
   has_one :acc_application
 

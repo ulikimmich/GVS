@@ -1,20 +1,44 @@
 class AccApplicationsController < ApplicationController
   before_action :set_acc_application, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user
 
   # GET /acc_applications
   # GET /acc_applications.json
   def index
-    @acc_applications = AccApplication.all
+    if current_user.admin?
+      #read all users
+      @users = User.all
+
+      #save all users applications in array
+      applications = @users.map do |usr|
+        usr.acc_application
+      end
+
+      #remove nil objects from aray
+      a = applications.compact
+      @acc_applications = a.sort {|x,y|  y.created_at <=> x.created_at }
+    else
+      redirect_to root_path
+    end
   end
 
   # GET /acc_applications/1
   # GET /acc_applications/1.json
   def show
+    respond_to do |format|
+      format.html { render "layouts/_acc_application" }
+    end
   end
 
   # GET /acc_applications/new
   def new
-    @acc_application = AccApplication.new
+    #only show application form if user hasn't submitted one already
+    if current_user.acc_application.nil?
+      @acc_application = AccApplication.new
+    else
+      redirect_to current_user
+    end
+
   end
 
   # GET /acc_applications/1/edit
@@ -24,11 +48,14 @@ class AccApplicationsController < ApplicationController
   # POST /acc_applications
   # POST /acc_applications.json
   def create
-    @acc_application = AccApplication.new(acc_application_params)
+    # returns only one Acc_Application object vs. has_many which returns an array.
+    # see http://guides.rubyonrails.org/association_basics.html#methods-added-by-has-one
+    @acc_application = current_user.build_acc_application(acc_application_params)
 
     respond_to do |format|
       if @acc_application.save
-        format.html { redirect_to @acc_application, notice: 'Acc application was successfully created.' }
+        format.html { redirect_to @acc_application }
+        flash[:success] = 'Application was successfully created.'
         format.json { render action: 'show', status: :created, location: @acc_application }
       else
         format.html { render action: 'new' }
@@ -42,7 +69,8 @@ class AccApplicationsController < ApplicationController
   def update
     respond_to do |format|
       if @acc_application.update(acc_application_params)
-        format.html { redirect_to @acc_application, notice: 'Acc application was successfully updated.' }
+        format.html { redirect_to @acc_application }
+        flash[:success] = 'Application was successfully updated.'
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

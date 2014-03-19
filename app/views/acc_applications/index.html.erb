@@ -1,10 +1,14 @@
-<h1>Listing acc_applications</h1>
+<h1>Listing GTA applications</h1>
+<br>
 
-<table>
+<div class="well">
+<table class="table table-striped">
   <thead>
     <tr>
-      <th></th>
-      <th></th>
+      <th>ID</th>
+      <th>Company Name</th>
+      <th>Company Description</th>
+      <th>Date Submitted</th>
       <th></th>
     </tr>
   </thead>
@@ -12,11 +16,13 @@
   <tbody>
     <% @acc_applications.each do |acc_application| %>
       <tr>
-        <td><%= acc_application.id %></td>
-        <td><%= acc_application.appform_field_1 %></td>
-        <td><%= link_to 'Show', acc_application %></td>
-        <td><%= link_to 'Edit', edit_acc_application_path(acc_application) %></td>
-        <td><%= link_to 'Destroy', acc_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to acc_application.id, acc_application %></td>
+        <td><%= link_to acc_application.appform_field_1, acc_application %></td>
+        <td style="width: 40%"><%= acc_application.appform_field_2 %></td>
+        <td><%= acc_application.created_at.to_date %></td>
+        <td>
+          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs" %> |
+          <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_acc_application_path(acc_application), class: "btn btn-primary btn-xs" %> | <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, acc_application, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,3 +31,4 @@
 <br>
 
 <%= link_to 'New Acc application', new_acc_application_path %>
+</div>

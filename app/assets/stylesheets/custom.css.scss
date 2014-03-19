@@ -52,7 +52,6 @@ a img:hover {
 }
 
 #profileSidebar {
-  font-size: .6em;
   color: #919292;
 }
 
@@ -231,4 +230,9 @@ aside {
       border-bottom: 1px solid #999999;
     }
   }
+}
+
+.sidebar {
+  background-color: #eaebec;
+  margin-top: 140px;
 }
