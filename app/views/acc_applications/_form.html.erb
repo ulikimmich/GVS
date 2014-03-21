@@ -15,10 +15,13 @@
 
     <div class="row well" id="rowspacer">
       <div class="col-md-10">
-        <div class="form-group">
-          <%= f.label(:status, 'Status') %>
-          <%= select(:acc_application, :status, [['new', 'new'], ['pass', 'pass'], ['consider', 'consider'], ['recommend', 'recommend'], ['incomplete', 'incomplete'] ], :class => "form-control") %>
-        </div>
+        <% if current_user.admin? %>
+            <div class="form-group">
+              <%= f.label(:status, 'Status') %>
+              <%= select(:acc_application, :status, [['new', 'new'], ['pass', 'pass'], ['consider', 'consider'], ['recommend', 'recommend'], ['incomplete', 'incomplete'] ], :class => "form-control") %>
+            </div>
+        <% end %>
+
         <div class="form-group">
           <%= f.label(:appform_field_1, QUESTION_ONE) %>
           <%= f.text_field :appform_field_1, :class => "form-control" %>
