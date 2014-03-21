@@ -8,6 +8,7 @@
       <th>ID</th>
       <th>Company Name</th>
       <th>Company Description</th>
+      <th>Status</th>
       <th>Date Submitted</th>
       <th></th>
     </tr>
@@ -19,6 +20,21 @@
         <td><%= link_to acc_application.id, acc_application %></td>
         <td><%= link_to acc_application.appform_field_1, acc_application %></td>
         <td style="width: 40%"><%= acc_application.appform_field_2 %></td>
+        <%
+          status = acc_application.status
+          case status
+          when "new"
+        %>
+          <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle">New</td>
+        <% when "consider" %>
+          <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle">Consider</td>
+        <% when "recommend" %>
+          <td style="background-color: #F7CB2A; color: white; font-weight: bold; text-align: center;vertical-align: middle">Recommend</td>
+        <% when "pass" %>
+            <td style="background-color: #30BA40; color: white; font-weight: bold; text-align: center;vertical-align: middle">Pass</td>
+        <% when "incomplete" %>
+            <td style="background-color: #DE1D10; color: white; font-weight: bold; text-align: center;vertical-align: middle">Incomplete</td>
+        <% end %>
         <td><%= acc_application.created_at.to_date %></td>
         <td>
           <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs" %> |

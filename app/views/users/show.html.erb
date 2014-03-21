@@ -27,4 +27,6 @@
 <% if @user.acc_application %>
     <h3>Submitted Application</h3>
     <%= render "layouts/acc_application" %>
+<% elsif !current_user.admin?%>
+    <%= link_to 'New Application', new_acc_application_path, class: "btn btn-md btn-primary"  %>
 <% end %>
