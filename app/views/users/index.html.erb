@@ -1,6 +1,6 @@
 <% provide(:title, 'All users') %>
 
-<h2 style="margin-top: -50px">All Artists</h2>
+<h2 style="margin-top: -50px">All Startups</h2>
 <div style='width: 800px;'>
   <div id="map" style='width: 1140px; height: 400px;'></div>
 </div>
@@ -20,7 +20,14 @@
       <div class="col-md-3 col-sm-3" id="rowspacer">
         <div class="thumbnail thumbindex">
           <%= link_to image_tag(user.avatar.url(:thumb), class: "thumbnailindex"), user %>
-          <strong><%= link_to user.name, user %></strong>
+          <strong>
+            <!-- If user is registered and filled out application form show company name else show 'No application'  -->
+          <% if user.acc_application.nil? %>
+                No application
+          <% else %>
+                <%= link_to user.acc_application.appform_field_1, user %>
+          <% end %>
+          </strong>
          <% if current_user.admin? && !current_user?(user) %>
                <span style="font-size: .9em;">|
                  <%= link_to "delete", user, method: :delete,
@@ -28,8 +35,7 @@
                         id: 'deleteUser'%>
                </span>
           <% end %>
-
-          <br /><small><%= user.country %></small>
+          <br /><small><%= user.name %></small>
         </div>
       </div>
   <% end %>

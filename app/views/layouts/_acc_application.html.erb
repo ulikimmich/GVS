@@ -2,8 +2,8 @@
 
 <div class="row well">
   <div class="col-md-8">
+  <% if current_user.admin? %>
     <h1>
-
       <%
          status = @acc_application.status
          case status
@@ -19,8 +19,8 @@
       <% when "incomplete" %>
           <h1 style="background-color: #DE1D10; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">Incomplete</h1>
       <% end %>
-
     </h1>
+  <% end %>
     <h2><%= @acc_application.appform_field_1 %><br><small>Date submitted: <%= @acc_application.created_at.to_date %></small></h2><br>
     <p><strong><%= QUESTION_ONE %></strong><br>
       <%= @acc_application.appform_field_1 %></p>

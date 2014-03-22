@@ -20,14 +20,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    # if admin redirect to listings page
-    # else show user profile with application
-    if current_user.admin?
-      redirect_to acc_applications_path
-    else
       @user = User.find(params[:id])
       @acc_application = @user.acc_application
-     end
   end
 
   def create
@@ -78,7 +72,9 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      if !current_user.admin?
+        redirect_to(root_url) unless current_user?(@user)
+      end
     end
 
   def admin_user

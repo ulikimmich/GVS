@@ -33,8 +33,9 @@
         <li  class="<%= current_page?(contact_path) ? "active" : "" %>"style="padding-right: 20px"><%= link_to "Contact us", contact_path %></li>
         <% if signed_in? %>
             <% if current_user.admin? %>
-                <li class="<%= current_page?(users_path) ? "active" : "" %>"><%= link_to "Artists", users_path %></li>
-            <% end %>
+                <li class="<%= current_page?(users_path) ? "active" : "" %>"><%= link_to "Startups", users_path %></li>
+                <li class="<%= current_page?(acc_applications_path) ? "active" : "" %>"><%= link_to "Admin", acc_applications_path %></li>
+      <% end %>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
               <ul class="dropdown-menu">
