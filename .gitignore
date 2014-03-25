@@ -26,4 +26,4 @@ doc/
 .secret
 
 # Ignore AWS keys
-env.rb
+# env.rb

@@ -4,24 +4,33 @@
 <% end %>
 
 
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Film & Transmedia Studio</h1>
-              <div class="row" id="rowspacer">
-                <div class="col-sm-6">
-                  <div class="videoWrapper" style="margin: 0 auto">
-                    <iframe allowfullscreen="" src="https://player.vimeo.com/video/80512081" frameborder="0" width="500" height="281"></iframe>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <p>Global Virtual Studio (GVS) is a team of content creators based on the Big Island of Hawai'i and connected to the world. GVS is passionate about transforming original ideas into stories and bringing them to life.</p>
-                  <p id="rowspacer"><%= link_to "Learn more &raquo;".html_safe, about_path, class: "btn btn-success btn-lg" %></p>
-                </div>
+<div class="jumbotron">
+  <div class="container">
+    <h1>Film & Transmedia Studio</h1>
+          <div class="row" id="rowspacer">
+            <div class="col-sm-6">
+              <div class="videoWrapper" style="margin: 0 auto">
+                <iframe allowfullscreen="" src="https://player.vimeo.com/video/80512081" frameborder="0" width="500" height="281"></iframe>
               </div>
-      </div>
-    </div>
+            </div>
+            <div class="col-sm-6">
+              <p>Global Virtual Studio (GVS) is a team of content creators based on the Big Island of Hawai'i and connected to the world. GVS is passionate about transforming original ideas into stories and bringing them to life.</p>
+              <p id="rowspacer"><%= link_to "Learn more &raquo;".html_safe, about_path, class: "btn btn-success btn-lg" %></p>
+            </div>
+          </div>
+  </div>
+</div>
 
-<div class="page-header" id="whiteBg" style="padding-left: 70px">
+<div>
+  <div class="row" id="acc-banner">
+    <div class="col-md-12" id="adaptive">
+      <img src="assets/acc_banner_top.jpg">
+      <img src="assets/acc_banner_bottom.png">
+    </div>
+  </div>
+</div>
+
+<div class="page-header" id="whiteBg">
   <div class="row" id="rowspacer">
     <div class="col-sm-12 col-md-10">
         <h2>Creative Proof of Concepts & Post Production</h2>
@@ -60,7 +69,6 @@
 
  </div>
  <div class="row" id="rowspacer">
-
   <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
         <p><%= link_to image_tag("poster_storyboard.jpg", alt: "", width: "215px"), storyboard_path%></p>
@@ -88,7 +96,7 @@
    <!--</div>-->
 
   </div>
+ </div>
 
-</div>
  <!-- End Main Content -->
 

@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140320005100) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "status",           default: "ew"
+    t.string   "status",           default: "new"
   end
 
   create_table "disciplines", force: true do |t|

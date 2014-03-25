@@ -235,3 +235,14 @@ aside {
 .sidebar {
   background-color: #eaebec;
 }
+
+/* Accelerator banner */
+#acc-banner {
+  padding: 0;
+}
+#adaptive img {
+  border: 0;
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
