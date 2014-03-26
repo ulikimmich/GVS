@@ -3,7 +3,7 @@
 <%= render 'layouts/btn_editing' %>
 
 <div class="row well">
-  <div class="col-md-8">
+  <div class="col-sm-8 col-md-8">
   <% if current_user.admin? %>
     <h1>
       <%
@@ -65,7 +65,7 @@
 
   <!-- only show comments when user is admin -->
     <% if current_user.admin? %>
-      <div class="col-md-4 sidebar">
+      <div class="col-sm-4 col-md-4 sidebar">
         <h3>Contact info </h3>
         Name: <%= @acc_application.user.name %><br>
         Email: <%= @acc_application.user.email %><br>

@@ -25,20 +25,21 @@
           case status
           when "new"
         %>
-          <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle">New</td>
+          <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">New</td>
         <% when "consider" %>
-          <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle">Consider</td>
+          <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Consider</td>
         <% when "recommend" %>
-          <td style="background-color: #F7CB2A; color: white; font-weight: bold; text-align: center;vertical-align: middle">Recommend</td>
+          <td style="background-color: #F7CB2A; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Recommend</td>
         <% when "pass" %>
-            <td style="background-color: #30BA40; color: white; font-weight: bold; text-align: center;vertical-align: middle">Pass</td>
+            <td style="background-color: #30BA40; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Pass</td>
         <% when "incomplete" %>
             <td style="background-color: #DE1D10; color: white; font-weight: bold; text-align: center;vertical-align: middle">Incomplete</td>
         <% end %>
         <td><%= acc_application.created_at.to_date %></td>
         <td>
-          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs" %> |
-          <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_acc_application_path(acc_application), class: "btn btn-primary btn-xs" %> | <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, acc_application, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs", id: "btn-xs-padding" %><br>
+          <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_acc_application_path(acc_application), class: "btn btn-primary btn-xs", id: "btn-xs-padding" %><br>
+          <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, acc_application, class: "btn btn-danger btn-xs", id: "btn-xs-padding", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -2,24 +2,80 @@
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media (max-width: 1024px) {
+  .container {
+  max-width: 900px;
+}
+
+  .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom:0;
+  }
+}
+
+
 body {
   /*overflow:hidden; 		 needed to eliminate scrollbars caused by the background image */
   padding:0;margin:0;		/* necessary for the raster to fill the screen */
   height:100%;width:100%;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 38px;
+  font-size: 37px;
+}
+h2 small {
+  font-size: 23px;
+}
+
+.jumbotron {
+  padding-top: 20px;
+}
+
+.jumbotron h1 {
+  font-size: 60px;
+}
+
+h1 {
+  @extend h2;
+  font-weight: 400;
 }
 
 h3 {
-	color: #666666;
+  font-size: 23px;
+  color: #666666;
+}
+.nav {
+  font-size: 16px;
+}
+
+a img:hover {
+  border-color: #a3a3a3;
+}
+
+#noBold {
+  font-weight: normal;
+}
+#deleteUser {
+  color: #ff0000;
+}
+
+#profileSidebar {
+  color: #919292;
 }
 
 .navbar-right .btn-success {
   margin-top: 8px;
+}
+.dropdown-menu > li > a:hover{
+ background-color: #6c6c6c;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background-color: #6c6c6c;
 }
 
 .thumbnail h2 {
@@ -63,7 +119,7 @@ h3 {
   padding-top: 15px;
 }
 .logo {
-  margin-right: 70px;
+  margin-right: 50px;
   margin-top: 4px;
   height: 45px;
   width: 109px;
@@ -187,8 +243,26 @@ aside {
     }
   }
 }
+
+.sidebar {
+  background-color: #eaebec;
+}
+
 /* Accelerator banner */
 #acc-banner {
-  margin-left: 0;
   padding: 0;
+}
+#adaptive img {
+  border: 0;
+  width: 100%;
+  display: block;
+  max-width: 100%;
+}
+
+.thumbnail {
+  margin-bottom: 10px;
+}
+
+#btn-xs-padding {
+  margin-bottom: 5px;
 }
