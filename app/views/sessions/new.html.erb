@@ -1,8 +1,9 @@
 <% provide(:title, "Sign in") %>
+<div class="well">
 <h2>Sign in</h2>
 
-<div class="row well" id="rowspacer">
-  <div class="col-lg-5">
+<div class="row" id="rowspacer">
+  <div class="col-sm-5 col-md-5">
     <%= form_for(:session, url: sessions_path) do |f| %>
 
         <div class="form-group">
@@ -18,4 +19,5 @@
 
     <!--<p>New user? <%= link_to "Sign up now!", signup_path %></p>-->
   </div>
+</div>
 </div>
