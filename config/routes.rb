@@ -20,6 +20,7 @@ GVS::Application.routes.draw do
   match '/editorial', to: 'pages#editorial', via: 'get'
   match '/partners', to: 'pages#partners', via: 'get'
   match '/development', to: 'pages#development', via: 'get'
+  match '/accelerator', to: 'pages#accelerator', via: 'get'
   match '/contact', to: 'contact#new', :via => :get
   match '/contact', to: 'contact#create', :via => :post
 

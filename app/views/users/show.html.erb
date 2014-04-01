@@ -1,12 +1,12 @@
 <% provide(:title, @user.name) %>
 
   <div class="row well" style="margin-top: -80px">
-    <div class="col-md-8">
+    <div class="col-sm-8 col-md-8">
         <%= image_tag(@user.avatar.url(:medium), size: "150", class: "avatar") %>
         <h2><strong><%= @user.name %> </strong><code style="font-size: .5em"><%= @user.status %></code></h2>
         <p><%= @user.city %><%= @user.city.nil? || @user.city.empty? ? " " : "," %><%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
     </div>
-    <div class="col-md-4 well" id="profileSidebar">
+    <div class="col-sm-4 col-md-4 well" id="profileSidebar">
       <p>
           Email: <strong><%= @user.email %></strong><br />
           Address: <strong><%= @user.address %></strong><br />

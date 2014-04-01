@@ -1,0 +1,31 @@
+<% provide(:title, 'Accelerator') %>
+<% provide(:carousel, '') %>
+
+<div class="apply-img">
+  <div class="row">
+    <div class="col-sm-12 col-md-12" id="adaptive">
+      <%= image_tag("accelerator_top.jpg", alt: "GTA Accelerator") %>
+      <%= image_tag("acc_banner_bottom.png", alt: "GTA Accelerator") %>
+    </div>
+  </div>
+  <div class="row" id="rowspacer">
+      <div class="col-sm-2 col-md-2" style="text-align:center"><%= image_tag("rocket.png", alt: "GTA rocket", class: "rocket-style" ) %></div>
+      <div class="col-sm-6 col-md-6">
+        <h2>How it Works<br /><small>GVS specializes in the development of transmedia projects and franchises</small></h2>
+        <div id="rowspacer">
+            <p><strong>Global Virtual Studio</strong> is developing a Hawai'i-based Transmedia Accelerator to empower creative entrepreneurs to launch original, future-proof, impacting transmedia franchises for wide commercial audiences.</p>
+        </div>
+      </div>
+      <div class="col-sm-4 col-md-4">
+        <div class="apply-box">
+          <p><strong>Season:</strong> Summer 2014</p>
+          <p><strong>Applications:</strong> <span style="color: #04bbf7"> OPEN</span> </p>
+          <p>Final application deadline is June 30th, 2014.</p>
+          <div style="text-align:center" id="rowspacer"><%= button_to "APPLY", signup_path, class: "btn btn-success btn-lg", id: "apply-btn", method: :get %></div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- End Main Content -->

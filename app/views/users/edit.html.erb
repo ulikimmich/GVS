@@ -1,19 +1,21 @@
 <% provide(:title, "Edit user") %>
 
 <div class="row well" id="rowspacer" style="margin-top: -70px">
-  <div class="col-md-5">
+  <div class="col-sm-5 col-md-5">
     <%= render 'shared/error_messages' %>
     <h1>Update profile</h1>
     <%= form_for(@user) do |f| %>
-    <div class="form-group">
-     <%= f.label :status %>
-    <%= select(:user, :status, [['active', 'active'], ['standby', 'standby'], ['not active', 'not active'] ], :class => "form-control") %>
-    </div>
+    <% if current_user.admin? %>
+        <div class="form-group">
+         <%= f.label :status %>
+        <%= select(:user, :status, [['active', 'active'], ['standby', 'standby'], ['not active', 'not active'] ], :class => "form-control") %>
+        </div>
+    <% end %>
   </div>
 </div>
 
   <div class="row well" id="rowspacer">
-    <div class="col-md-5">
+    <div class="col-sm-5 col-md-5">
         <div class="form-group">
         <%= f.label :name %>
           <%= f.text_field :name, :class => "form-control", :placeholder => "Enter name" %>
@@ -37,7 +39,7 @@
         </div>
 
   </div>
-  <div class="col-md-5">
+  <div class="col-sm-5 col-md-5">
         <div class="form-group">
           <%= f.label :phone %>
           <%= f.text_field :phone, :class => "form-control", :placeholder => "Enter phone" %>
@@ -67,7 +69,7 @@
 </div>
 
 <div class="row well" id="rowspacer">
-  <div class="col-md-5">
+  <div class="col-sm-5 col-md-5">
     <div class="form-group">
       <%= f.label :skype %>
       <%= f.text_field :skype, :class => "form-control", :placeholder => "Skype name" %>

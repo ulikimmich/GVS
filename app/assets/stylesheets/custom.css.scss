@@ -250,6 +250,7 @@ aside {
 
 /* Accelerator banner */
 #acc-banner {
+  background-color: white;
   padding: 0;
 }
 #adaptive img {
@@ -279,4 +280,26 @@ aside {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Accelerator page */
+.apply-img {
+  margin-top: -50px;
+  background-color: white;
+  padding: 0;
+}
+.rocket-style {
+  margin: 28px 0 0 15px;
+  width: 110px;
+}
+.apply-box {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  width: 75%;
+  background-color: #000000;
+  padding: 10px 10px 40px 10px;
+  color: white;
+}
+#apply-btn {
+  width: 60%;
 }
