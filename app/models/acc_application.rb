@@ -3,7 +3,12 @@ class AccApplication < ActiveRecord::Base
   belongs_to :user
   default_scope -> { order('created_at DESC') }
 
+  # filter only applications that are submitted and not saved as drafts
+  scope :draft, -> { where( draft: false ) }
+
   validates :user_id, presence: true
+  validates :appform_field_1, presence: true
+=begin
   validates :appform_field_1, :appform_field_2, :appform_field_3, :appform_field_5,
             :appform_field_6, :appform_field_7, :appform_field_8, :appform_field_9, :appform_field_10,
             :appform_field_11, :appform_field_12, :appform_field_13, :appform_field_14, :appform_field_15,
@@ -13,5 +18,6 @@ class AccApplication < ActiveRecord::Base
   VALID_URL_REGEX = /(http|https):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?/ix
   validates :appform_field_4, presence:   true,
             format:     { with: VALID_URL_REGEX }
+=end
 
 end

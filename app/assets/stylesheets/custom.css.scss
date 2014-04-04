@@ -31,12 +31,15 @@ h2 small {
   font-size: 23px;
 }
 
-.jumbotron {
-  padding-top: 20px;
+.container .jumbotron {
+  padding: 0;
 }
 
 .jumbotron h1 {
   font-size: 60px;
+}
+#jumbotron-padding {
+  padding: 20px 60px 60px 60px;
 }
 
 h1 {
@@ -248,9 +251,17 @@ aside {
   background-color: #eaebec;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
 /* Accelerator banner */
 #acc-banner {
-  background-color: white;
   padding: 0;
 }
 #adaptive img {

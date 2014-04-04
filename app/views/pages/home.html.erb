@@ -3,17 +3,41 @@
     <%= render 'layouts/homecarousel' %>
 <% end %>
 
-<div>
+<div class="jumbotron">
   <div class="row" id="acc-banner">
-    <div class="col-md-12" id="adaptive">
-      <img src="assets/acc_banner_top.jpg">
-      <img src="assets/acc_banner_bottom.png">
-      <br><br>
+    <div class="col-sm-12 col-md-12" id="adaptive">
+      <%= image_tag("GTA-home-banner.jpg", alt: "GTA Accelerator") %>
+    </div>
+    <div class="col-sm-2 col-md-2" style="text-align:center"><br><br><%= image_tag("rocket.png", alt: "GTA rocket", class: "rocket-style" ) %></div>
+    <div class="col-sm-6 col-md-6">
+      <h2>Global Virtual Studio Transmedia Accelerator<br />
+        <small>Accelerator is a Hawai'i-based initiative that will empower creative entrepreneurs to launch original, future-proof, impacting franchises for wide commercial audiences.</small></h2>
+      <div id="rowspacer">
+        <p><strong>Do you have a story to tell?</strong><br>
+          The GVS Transmedia Accelerator will bring together a world class community of entrepreneurs, creatives, mentors, investors, innovators and technologists, all with a common trait: the ability to dream big and tell your story through Transmedia.  We are looking for creative entrepreneurs that have a commercially viable concept that will compete in the world marketplace.</p>
+        <p><strong>What is Transmedia?</strong><br>
+          Transmedia storytelling (also known as “transmedia narrative” or “multiplatform storytelling”|) is the technique of
+          telling a single story or story experience across multiple platforms and formats including Film, TV, Webisodes, Apps, Gaming and beyond.  This is where media and technology converge to enhance the power of storytelling.</p><hr>
+        <p><small>GVS Transmedia Accelerator ... Created in Hawai’i - made for the world</small></p>
+      </div>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <div class="apply-box">
+        <p><strong>Season:</strong> April 11 - May 30th, 2014</p>
+        <p><strong>Start:</strong> late May/early June, 2014</p>
+        <!--<p><strong>Applications:</strong> <span style="color: #04bbf7"> OPEN</span> </p>-->
+        <div style="text-align:center" id="rowspacer"><%= button_to "More Info &raquo;".html_safe, accelerator_path, class: "btn btn-success btn-lg", id: "apply-btn", method: :get %></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="acc-banner">
+    <div class="col-sm-12 col-md-12" id="adaptive">
+      <%= image_tag("acc_banner_bottom.png", alt: "GTA Accelerator") %>
     </div>
   </div>
 </div>
 
-<div class="jumbotron">
+<div class="jumbotron" id="jumbotron-padding">
   <div class="container">
     <h1>Film & Transmedia Studio</h1>
     <div class="row" id="rowspacer">

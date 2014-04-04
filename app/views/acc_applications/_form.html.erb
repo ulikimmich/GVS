@@ -21,7 +21,11 @@
               <%= select(:acc_application, :status, [['new', 'new'], ['pass', 'pass'], ['consider', 'consider'], ['recommend', 'recommend'], ['incomplete', 'incomplete'] ], :class => "form-control") %>
             </div>
         <% end %>
-
+        <div class="alert alert-info alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <p><strong>All fields must be filled out before submitting the application.</strong></p>
+          <p>When saving the application as draft allows you edit the application at a later time and therefore won't get submitted. On the other hand when submitting the application won't allow you to do edits after you submitted it.</p>
+        </div><br>
         <div class="form-group">
           <%= f.label(:appform_field_1, QUESTION_ONE) %>
           <%= f.text_field :appform_field_1, :class => "form-control" %>
@@ -94,11 +98,16 @@
           <%= f.label(:appform_field_18, QUESTION_EIGHTEEN) %>
           <%= f.text_area :appform_field_18, :class => "form-control", :cols => 40, :rows => 7 %>
         </div>
+        <br><br>
+        <div class="actions">
+          <% if current_user.admin? %>
+              <%= f.submit "Save as Draft", class: "btn btn-lg btn-success" %>
+          <% else %>
+              <%= f.submit "Submit Application", class: "btn btn-lg btn-success" %>
+              <span style="padding-left: 20px"></span><%= f.submit "Save as Draft",  class: "btn btn-default btn-success" %>
+          <% end %>
+        </div>
       </div>
      </div>
 
-  <div class="actions">
-    <%= f.submit "Submit Application", class: "btn btn-large btn-success" %>
-
-  </div>
 <% end %>

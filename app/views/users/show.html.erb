@@ -3,7 +3,7 @@
   <div class="row well" style="margin-top: -80px">
     <div class="col-sm-8 col-md-8">
         <%= image_tag(@user.avatar.url(:medium), size: "150", class: "avatar") %>
-        <h2><strong><%= @user.name %> </strong><code style="font-size: .5em"><%= @user.status %></code></h2>
+        <h2><strong><%= @user.name %> </strong></h2>
         <p><%= @user.city %><%= @user.city.nil? || @user.city.empty? ? " " : "," %><%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
     </div>
     <div class="col-sm-4 col-md-4 well" id="profileSidebar">
@@ -27,7 +27,7 @@
   </div>
 
 <% if @user.acc_application %>
-    <h3>Submitted Application</h3>
+    <h1>Your Application</h1><br>
     <%= render "layouts/acc_application" %>
 <% elsif !current_user.admin?%>
     <%= link_to 'New Application', new_acc_application_path, class: "btn btn-md btn-primary"  %>

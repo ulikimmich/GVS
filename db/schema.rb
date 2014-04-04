@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140320005100) do
+ActiveRecord::Schema.define(version: 20140402021219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140320005100) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "status",           default: "new"
+    t.boolean  "draft",            default: true
   end
 
   create_table "disciplines", force: true do |t|
@@ -76,8 +77,8 @@ ActiveRecord::Schema.define(version: 20140320005100) do
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
-    t.float    "latitude", default: "21.912870"
-    t.float    "longitude", default: "-160.161145"
+    t.float    "latitude"
+    t.float    "longitude"
     t.boolean  "gmaps"
     t.string   "skype"
     t.string   "creative_platform_profile"

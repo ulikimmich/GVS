@@ -1,8 +1,10 @@
 <% if current_user.admin? %>
     <%= link_to '<span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;Back to Listing'.html_safe, acc_applications_path, class: "btn btn-sm btn-primary" %>
+<% end %>
+<% if current_user.admin? || current_user.acc_application.draft?  %>
     <span style="margin-left: 10px">&nbsp;</span>
     <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit Application'.html_safe, edit_acc_application_path(@acc_application), class: "btn btn-sm btn-primary" %>
-    <span style="margin-left: 30%">&nbsp;</span>
 <% end %>
+<span style="margin-left: 20px">&nbsp;</span>
     <%= link_to '<span class="glyphicon glyphicon-save" style="padding-right:6px"></span>Download PDF'.html_safe, acc_application_path(@acc_application, format: "pdf") %>
     <br><br>

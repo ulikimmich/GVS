@@ -29,5 +29,20 @@ GVS::Application.configure do
 
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 587,
+      :domain               => "globalvirtualstudio.com",
+      :user_name            => "uli@globalvirtualstudio.com",
+      :password             => "kimchi06",
+      :authentication       => :plain,
+      :enable_starttls_auto => true
+  }
+
+  config.action_mailer.default_url_options = {
+      :host => "globalvirtualstudio.com"
+  }
+  config.action_mailer.perform_deliveries = true
 
 end

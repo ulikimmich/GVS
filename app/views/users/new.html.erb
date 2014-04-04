@@ -1,8 +1,8 @@
 <% provide(:title, 'Sign up') %>
+<div class="well">
+    <h2>Sign up</h2>
 
-    <h1>Sign up</h1>
-
-    <div class="row well" id="rowspacer">
+    <div class="row" id="rowspacer">
       <div class="col-md-5 col-sm-5">
 
         <%= form_for @user, :html => { :multipart => true } do |f| %>
@@ -26,8 +26,14 @@
             <%= f.password_field :password_confirmation, :class => "form-control", :placeholder => "Retype password" %>
             </div>
             <br>
-            <%= f.submit "Create my account", class: "btn btn-large btn-success" %>
+            <%= f.submit "Create my account", class: "btn btn-large btn-success" %><br><br>
+            <p>Already have an account? <%= link_to("Login here", signin_path) %></p>
         <% end %>
 
-        </div>
       </div>
+      <div class="col-sm-3 col-md-3 col-md-offset-1 col-sm-offset-1">
+        <p>Hi there,</p><p>Before you fill out your application form you have to first sign up for an account.</p>
+        <p>You can save your application as a draft for further editing. Once you submit your application you won't be able to edit it.</p>
+      </div>
+      </div>
+    </div>

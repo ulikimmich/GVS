@@ -2,6 +2,7 @@ class AccApplicationsController < ApplicationController
   before_action :set_acc_application, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user
 
+
   # GET /acc_applications
   # GET /acc_applications.json
   def index
@@ -14,7 +15,7 @@ class AccApplicationsController < ApplicationController
         usr.acc_application
       end
 
-      #remove nil objects from aray
+      #remove nil objects from array
       a = applications.compact
       @acc_applications = a.sort {|x,y|  y.created_at <=> x.created_at }
     else
@@ -73,13 +74,26 @@ class AccApplicationsController < ApplicationController
   # PATCH/PUT /acc_applications/1.json
   def update
     respond_to do |format|
-      if @acc_application.update(acc_application_params)
-        format.html { redirect_to @acc_application }
-        flash[:success] = 'Application was successfully updated.'
-        format.json { head :no_content }
+      # checks which button got clicked and sets the boolean draft field to false when application is submitted
+      if params[:commit] == "Save as Draft"
+        if @acc_application.update(acc_application_params)
+          format.html { redirect_to @acc_application }
+          flash[:success] = 'Application was successfully updated.'
+          format.json { head :no_content }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @acc_application.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @acc_application.errors, status: :unprocessable_entity }
+        if @acc_application.update(acc_application_params)
+          @acc_application.update_attribute(:draft, false)
+          format.html { redirect_to @acc_application }
+          flash[:success] = 'Application was successfully submitted.'
+          format.json { head :no_content }
+        else
+          format.html { render action: 'edit' }
+          format.json { render json: @acc_application.errors, status: :unprocessable_entity }
+        end
       end
     end
   end

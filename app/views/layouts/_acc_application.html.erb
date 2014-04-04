@@ -2,7 +2,7 @@
 
 <%= render 'layouts/btn_editing' %>
 
-<div class="row well">
+<div class="row well" xmlns="http://www.w3.org/1999/html">
   <div class="col-sm-8 col-md-8">
   <% if current_user.admin? %>
     <h1>
@@ -70,6 +70,7 @@
         <h3>Contact info </h3>
         Name: <%= @acc_application.user.name %><br>
         Email: <%= @acc_application.user.email %><br>
+        <div><hr></div>
         <div id="disqus_thread" style="margin-top: 50px"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
