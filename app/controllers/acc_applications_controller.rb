@@ -118,6 +118,6 @@ class AccApplicationsController < ApplicationController
     def acc_application_params
       params.require(:acc_application).permit(:status, :appform_field_1, :appform_field_2, :appform_field_3, :appform_field_4, :appform_field_5, :appform_field_6,
                                               :appform_field_7, :appform_field_8, :appform_field_9, :appform_field_10, :appform_field_11, :appform_field_12,
-                                              :appform_field_13, :appform_field_14, :appform_field_15, :appform_field_16, :appform_field_17, :appform_field_18)
+                                              :appform_field_13, :appform_field_14, :appform_field_15, :appform_field_16, :appform_field_17, :appform_field_18, :appform_field_19)
     end
 end

@@ -15,6 +15,7 @@
 
     <div class="row well" id="rowspacer">
       <div class="col-md-10">
+        <h2>Application Phase 1</h2><br>
         <% if current_user.admin? %>
             <div class="form-group">
               <%= f.label(:status, 'Status') %>
@@ -26,6 +27,7 @@
           <p><strong>All fields must be filled out before submitting the application.</strong></p>
           <p>When saving the application as draft allows you edit the application at a later time and therefore won't get submitted. On the other hand when submitting the application won't allow you to do edits after you submitted it.</p>
         </div><br>
+        <h3>Applicant Basic Info & Background</h3>
         <div class="form-group">
           <%= f.label(:appform_field_1, QUESTION_ONE) %>
           <%= f.text_field :appform_field_1, :class => "form-control" %>
@@ -40,35 +42,41 @@
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_4, QUESTION_FOUR) %>
-          <%= f.text_field :appform_field_4, :class => "form-control", :placeholder => "http://www.yourcompany.com" %>
+          <p style="padding-left: 15px"><i>Please provide: Last name, First name, company role, email address, mailing address, physical location, phone, date of birth, personal website, LinkenIn, etc. (if applicable), education & training (schools attended, year of graduation, course of study, degree or certificate earned), professional history (attach resume or list significant professional experience: company name/project, role/job title, scope of work, any recognition of note)</i></p>
+          <%= f.text_area :appform_field_4, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_5, QUESTION_FIVE) %>
-          <%= f.text_area :appform_field_5, :class => "form-control", :cols => 40, :rows => 3 %>
+          <p style="padding-left: 15px"><i>Please provide: Last name, First name, company role, email address, mailing address, physical location, phone, date of birth, personal website, LinkenIn, etc. (if applicable), education & training (schools attended, year of graduation, course of study, degree or certificate earned), professional history (attach resume or list significant professional experience: company name/project, role/job title, scope of work, any recognition of note)</i></p>
+          <%= f.text_area :appform_field_5, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_6, QUESTION_SIX) %>
-          <%= f.text_area :appform_field_6, :class => "form-control", :cols => 40, :rows => 3 %>
+          <%= f.text_area :appform_field_6, :class => "form-control", :cols => 40, :rows => 1 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_7, QUESTION_SEVEN) %>
-          <%= f.text_area :appform_field_7, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_7, :class => "form-control", :cols => 40, :rows => 3 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_8, QUESTION_EIGHT) %>
-          <%= f.text_area :appform_field_8, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_8, :class => "form-control", :cols => 40, :rows => 1 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_9, QUESTION_NINE) %>
+          <p style="padding-left: 15px"><ol><li>Does the team’s primary applicant have any other regular/daily commitments (job, etc.)?  List commitments with hours per week and term.</li><li>Do the team’s other members have any other regular/daily commitments(job, etc.)?  List commitments with hours per week and term.</li></ol>
+          </p>
           <%= f.text_area :appform_field_9, :class => "form-control", :cols => 40, :rows => 7 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_10, QUESTION_TEN) %>
-          <%= f.text_area :appform_field_10, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_10, :class => "form-control", :cols => 40, :rows => 1 %>
         </div>
+        <br>
+        <h3>Company Goals & Status</h3>
         <div class="form-group">
           <%= f.label(:appform_field_11, QUESTION_ELEVEN) %>
-          <%= f.text_area :appform_field_11, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_11, :class => "form-control", :cols => 40, :rows => 4 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_12, QUESTION_TWELVE) %>
@@ -76,7 +84,7 @@
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_13, QUESTION_THIRTEEN) %>
-          <%= f.text_field :appform_field_13, :class => "form-control" %>
+          <%= f.text_field :appform_field_13, :class => "form-control", :cols => 40, :rows => 7 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_14, QUESTION_FOURTEEN) %>
@@ -84,19 +92,23 @@
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_15, QUESTION_FIFTEEN) %>
-          <%= f.text_area :appform_field_15, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_15, :class => "form-control", :cols => 40, :rows => 5 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_16, QUESTION_SIXTEEN) %>
-          <%= f.text_area :appform_field_16, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_16, :class => "form-control", :cols => 40, :rows => 2 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_17, QUESTION_SEVENTEEN) %>
-          <%= f.text_area :appform_field_17, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.text_area :appform_field_17, :class => "form-control", :cols => 40, :rows => 5 %>
         </div>
         <div class="form-group">
           <%= f.label(:appform_field_18, QUESTION_EIGHTEEN) %>
           <%= f.text_area :appform_field_18, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_19, QUESTION_NINETEEN) %>
+          <%= f.text_area :appform_field_19, :class => "form-control", :cols => 40, :rows => 3 %>
         </div>
         <br><br>
         <div class="actions">

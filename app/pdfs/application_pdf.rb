@@ -20,6 +20,11 @@ class ApplicationPdf < Prawn::Document
 
   def questions
     move_down 20
+    text "Applicant Basic Info & Background", size: 15
+    move_down 7
+    text QUESTION_ONE, style: :bold
+    text @acc_application.appform_field_1
+    move_down 5
     text QUESTION_TWO, style: :bold
     text @acc_application.appform_field_2
     move_down 5
@@ -46,7 +51,9 @@ class ApplicationPdf < Prawn::Document
     move_down 5
     text QUESTION_TEN, style: :bold
     text @acc_application.appform_field_10
-    move_down 5
+    move_down 15
+    text "Company Goals & Status", size: 15
+    move_down 7
     text QUESTION_ELEVEN, style: :bold
     text @acc_application.appform_field_11
     move_down 5
@@ -70,5 +77,8 @@ class ApplicationPdf < Prawn::Document
     move_down 5
     text QUESTION_EIGHTEEN, style: :bold
     text @acc_application.appform_field_18
+    move_down 5
+    text QUESTION_NINETEEN, style: :bold
+    text @acc_application.appform_field_19
   end
 end
