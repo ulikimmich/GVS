@@ -5,6 +5,7 @@
         <%= image_tag(@user.avatar.url(:medium), size: "150", class: "avatar") %>
         <h2><strong><%= @user.name %> </strong></h2>
         <p><%= @user.city %><%= @user.city.nil? || @user.city.empty? ? " " : "," %><%= @user.state %> <%= @user.zipcode %><br><%= @user.country %></p>
+        <%= button_to "Edit Profile", edit_user_path(current_user), class: "btn btn-success", method: :get %>
     </div>
     <div class="col-sm-4 col-md-4 well" id="profileSidebar">
       <p>
