@@ -23,6 +23,7 @@ module GVS
     config.assets.paths << "#{Rails}/app/assets/fonts"
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
+    config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
         :address              => "smtp.gmail.com",
         :port                 => 587,
