@@ -2,6 +2,10 @@
 <html>
 <head>
   <title><%= page_title(yield(:title)) %></title>
+  <meta name="robots" content="index,follow">
+  <meta name="keywords" content="Hawai'i, Hawaii, Film, Television, Accelerator, startup, entrepreneur, digital media, mobile apps, Media, Reality Show, Documentary, transmedia, big island, oahu, maui" />
+  <meta name="description" content="Accelerator is a Hawai'i-based initiative that will empower creative entrepreneurs to launch original, future-proof, impacting franchises for wide commercial audiences.">
+  <meta name="google-site-verification" content="xFFMYSW-oTeoH2BwPsuCpypZ79xEE92S55QV60p_9zE" />
 
   <%= favicon_link_tag %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -26,8 +30,6 @@
           <div class="alert alert-<%= key %>"><%= value %></div>
       <% end %>
       <div class="content">
-
-
 
         <%= yield %>
 

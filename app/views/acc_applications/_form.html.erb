@@ -27,6 +27,7 @@
           <p><strong>Items with a * are required for consideration.</strong></p>
           <p>Saving the application as a draft allows you to edit the application at a later time. After you are finished with your application, select "Submit Application" and your application will be delivered.  You will no longer be able to make edits to your application after you submit.</p>
         </div>
+
         <h3>Applicant Basic Info & Background</h3>
         <div class="form-group">
           <%= f.label(:appform_field_1, QUESTION_ONE) %>
@@ -112,6 +113,7 @@
         </div>
         <p><strong>*20. Please download, complete and return the <%= link_to "Application Release Form", "../assets/GVS_Transmedia_Accelerator_Program_Application_Release.pdf", target: "_blank" %> to the email address: <%= mail_to "accel@globalvirtualstudio.com", "accel@globalvirtualstudio.com" %>.<br>Your application will not be reviewed until we have received this form.</strong></p>
         <br><br>
+        <h4>For questions visit the <%= link_to "Frequently Asked Questions", faq_path %> page.</h4><br>
         <div class="actions">
           <% if current_user.admin? %>
               <%= f.submit "Save as Draft", class: "btn btn-lg btn-success" %>

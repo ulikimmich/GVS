@@ -34,8 +34,8 @@ GVS::Application.configure do
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "globalvirtualstudio.com",
-      :user_name            => "uli@globalvirtualstudio.com",
-      :password             => "kimchi06",
+      :user_name            => "accel@globalvirtualstudio.com",
+      :password             => "gvskonaY2K10",
       :authentication       => :plain,
       :enable_starttls_auto => true
   }
