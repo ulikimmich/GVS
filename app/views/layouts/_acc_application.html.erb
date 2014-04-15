@@ -23,7 +23,7 @@
       <% end %>
     </h1>
   <% end %>
-    <h2><%= @acc_application.appform_field_1 %><br><small>Date submitted: <%= @acc_application.created_at.to_date %></small></h2><br>
+    <h2><%= @acc_application.appform_field_1 %><br><small>Date submitted: <%= @acc_application.created_at.to_formatted_s(:long) %></small></h2><br>
     <h3>Applicant Basic Info & Background</h3>
     <p><strong><%= QUESTION_ONE %></strong><br>
       <%= @acc_application.appform_field_1 %></p>

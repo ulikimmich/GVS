@@ -3,7 +3,7 @@
 <%= form_for @acc_application, :html => { :multipart => true } do |f| %>
   <% if @acc_application.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@acc_application.errors.count, "error") %> prohibited this application from being saved:</h2>
+      <h4><%= pluralize(@acc_application.errors.count, "error") %> prohibited this application from being saved:</h4>
 
       <ul>
       <% @acc_application.errors.full_messages.each do |msg| %>
@@ -111,7 +111,7 @@
           <%= f.label(:appform_field_19, QUESTION_NINETEEN) %>
           <%= f.text_area :appform_field_19, :class => "form-control", :cols => 40, :rows => 3 %>
         </div>
-        <p><strong>*20. Please download, complete and return the <%= link_to "Application Release Form", "../assets/GVS_Transmedia_Accelerator_Program_Application_Release.pdf", target: "_blank" %> to the email address: <%= mail_to "accel@globalvirtualstudio.com", "accel@globalvirtualstudio.com" %>.<br>Your application will not be reviewed until we have received this form.</strong></p>
+        <p><strong>*20. Please download, complete and return the <%= link_to "Application Release Form", "../../assets/GVS_Transmedia_Accelerator_Program_Application_Release.pdf", target: "_blank" %> to the email address: <%= mail_to "accel@globalvirtualstudio.com", "accel@globalvirtualstudio.com" %>.<br>Your application will not be reviewed until we have received this form.</strong></p>
         <br><br>
         <h4>For questions visit the <%= link_to "Frequently Asked Questions", faq_path %> page.</h4><br>
         <div class="actions">

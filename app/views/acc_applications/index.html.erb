@@ -1,4 +1,4 @@
-<h2 style="margin-top: -50px">Listing GTA applications</h2>
+<h2 style="margin-top: -50px">Applications listing</h2>
 <br>
 
 <div class="well">
@@ -7,9 +7,9 @@
     <tr>
       <th>ID</th>
       <th>Company Name</th>
-      <th>Company Description</th>
-      <th>Status</th>
+      <th>Name of Applicant</th>
       <th>Date Submitted</th>
+      <th>Status</th>
       <th></th>
     </tr>
   </thead>
@@ -19,7 +19,8 @@
       <tr>
         <td><%= link_to acc_application.id, acc_application %></td>
         <td><%= link_to acc_application.appform_field_1, acc_application %></td>
-        <td style="width: 40%"><%= acc_application.appform_field_2 %></td>
+        <td><%= link_to acc_application.user.name, acc_application.user %></td>
+        <td><%= acc_application.created_at.to_formatted_s(:long) %></td>
 
         <% if acc_application.draft?  %>
              <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">DRAFT</td>
@@ -39,10 +40,9 @@
                 <td style="background-color: #DE1D10; color: white; font-weight: bold; text-align: center;vertical-align: middle">Incomplete</td>
             <% end %>
         <% end %>
-        <td><%= acc_application.created_at.to_date %></td>
-        <td>
-          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs", id: "btn-xs-padding" %><br>
-          <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_acc_application_path(acc_application), class: "btn btn-primary btn-xs", id: "btn-xs-padding" %><br>
+        <td style="text-align: center">
+          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs", id: "btn-xs-padding" %>
+          <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_acc_application_path(acc_application), class: "btn btn-primary btn-xs", id: "btn-xs-padding" %>
           <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, acc_application, class: "btn btn-danger btn-xs", id: "btn-xs-padding", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
