@@ -1,6 +1,8 @@
 class AccApplication < ActiveRecord::Base
 
   belongs_to :user
+  has_many :founders
+
   default_scope -> { order('created_at DESC') }
 
   # filter only applications that are submitted and not saved as drafts
