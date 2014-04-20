@@ -1,0 +1,26 @@
+<div class="tableborder">
+<table>
+  <tr>
+    <td><%= f.label(:firstname, "First Name") %></td><td><%= f.text_field :firstname %><span style="padding-left: 10px"></span></td>
+    <td><%= f.label(:lastname, "Last Name") %></td><td><%= f.text_field :lastname %><span style="padding-left: 10px"></span></td>
+    <td><%= f.label(:email, "Email") %></td><td><%= f.text_field :email %></td><br>
+  </tr>
+  <tr>
+    <td><%= f.label(:address, "Address") %></td> <td><%= f.text_field :address %><span style="padding-left: 10px"></span></td>
+    <td><%= f.label(:city, "City") %></td> <td><%= f.text_field :city %><span style="padding-left: 10px"></span></td>
+    <td><%= f.label(:state, "State") %></td> <td><%= f.text_field :state, :size => "1" %><span style="padding-left: 10px"></span>
+  <%= f.label(:zipcode, "Zip") %> <%= f.text_field :zipcode, :size => "6" %><span style="padding-left: 10px"></span></td><br>
+  </tr>
+  <tr>
+    <td><%= f.label(:phone, "Phone") %></td> <td><%= f.text_field :phone %><span style="padding-left: 10px"></span></td>
+    <td><%= f.label(:dateofbirth, "Date of birth") %></td> <td><%= f.text_field :dateofbirth %><span style="padding-left: 10px"></span></td>
+    <td><%= f.label(:website, "Website") %></td> <td><%= f.text_field :website %><span style="padding-left: 10px"></span></td><br>
+  <tr>
+    <td><%= f.label(:companyrole, "Company role") %></td> <td><%= f.text_field :companyrole %><span style="padding-left: 10px"></span></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+  <%= f.label(:education, "Education") %><span style="padding-left: 30px"></span><%= f.text_area :education, :cols => 100, :rows => 7  %><br><br>
+  <%= f.label(:resume, "Resume") %><span style="padding-left: 43px"></span><%= f.text_area :resume, :cols => 100, :rows => 7  %><span style="padding-left: 10px"></span><br><br><br>
+</div>

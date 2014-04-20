@@ -33,6 +33,20 @@ class ApplicationPdf < Prawn::Document
     move_down 5
     text QUESTION_FOUR, style: :bold
     text @acc_application.appform_field_4
+
+    @acc_application.founders.each do |f|
+
+      t = make_table([  ["First name:" + f.firstname,"Last name:" + f.lastname,"Email:" + f.email.to_s, "Company role:" + f.companyrole.to_s],
+                        ["Address:" + f.address.to_s,"City:" + f.city,"State:" + f.state, "Zip:" + f.zipcode.to_s ],
+                        ["Phone:" + f.phone.to_s, "Date of birth:" + f.dateofbirth.to_s, "Website:" + f.website.to_s],
+                        [{ :content => "Education:" + f.education,  :colspan => 4 } ],
+                        [{ :content => "Resume:" + f.resume,  :colspan => 4 }]])
+      t.draw
+      move_down 20
+
+    end
+
+    move_down 20
     move_down 5
     text QUESTION_FIVE, style: :bold
     text @acc_application.appform_field_5

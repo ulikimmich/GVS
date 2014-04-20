@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user,      only: [ :index, :destroy]
 
   def index
-    @users = User.paginate(page: params[:page], :per_page   => 30, :order => 'name ASC')
+    @users = User.paginate(page: params[:page], :per_page   => 52, :order => 'created_at DESC')
 
     @hash = Gmaps4rails.build_markers(@users) do |user, marker|
 

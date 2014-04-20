@@ -8,7 +8,7 @@
       <th>ID</th>
       <th>Company Name</th>
       <th>Name of Applicant</th>
-      <th>Date Submitted</th>
+      <th>Date Updated</th>
       <th>Status</th>
       <th></th>
     </tr>
@@ -20,7 +20,7 @@
         <td><%= link_to acc_application.id, acc_application %></td>
         <td><%= link_to acc_application.appform_field_1, acc_application %></td>
         <td><%= link_to acc_application.user.name, acc_application.user %></td>
-        <td><%= acc_application.created_at.to_formatted_s(:long) %></td>
+        <td><%= acc_application.updated_at.to_formatted_s(:long) %></td>
 
         <% if acc_application.draft?  %>
              <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">DRAFT</td>

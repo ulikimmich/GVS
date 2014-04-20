@@ -17,7 +17,7 @@ class AccApplicationsController < ApplicationController
 
       #remove nil objects from array
       a = applications.compact
-      @acc_applications = a.sort {|x,y|  y.created_at <=> x.created_at }
+      @acc_applications = a.sort {|x,y|  y.updated_at <=> x.updated_at }
     else
       redirect_to root_path
     end
@@ -41,6 +41,9 @@ class AccApplicationsController < ApplicationController
     #only show application form if user hasn't submitted one already
     if current_user.acc_application.nil?
       @acc_application = AccApplication.new
+      2.times do
+        @acc_application.founders.build
+      end
     else
       redirect_to current_user
     end
@@ -78,7 +81,7 @@ class AccApplicationsController < ApplicationController
       if params[:commit] == "Save as Draft"
         if @acc_application.update(acc_application_params)
           format.html { redirect_to @acc_application }
-          flash[:success] = 'Application was successfully updated.'
+          flash[:success] = 'Application was successfully saved.'
           format.json { head :no_content }
         else
           format.html { render action: 'edit' }
@@ -118,6 +121,8 @@ class AccApplicationsController < ApplicationController
     def acc_application_params
       params.require(:acc_application).permit(:status, :appform_field_1, :appform_field_2, :appform_field_3, :appform_field_4, :appform_field_5, :appform_field_6,
                                               :appform_field_7, :appform_field_8, :appform_field_9, :appform_field_10, :appform_field_11, :appform_field_12,
-                                              :appform_field_13, :appform_field_14, :appform_field_15, :appform_field_16, :appform_field_17, :appform_field_18, :appform_field_19)
+                                              :appform_field_13, :appform_field_14, :appform_field_15, :appform_field_16, :appform_field_17, :appform_field_18, :appform_field_19,
+                                              founders_attributes: [:id, :firstname, :lastname, :email, :companyrole, :address, :city, :state, :zipcode, :phone, :dateofbirth, :website,
+                                              :education, :resume])
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140415003304) do
+ActiveRecord::Schema.define(version: 20140419024843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,37 @@ ActiveRecord::Schema.define(version: 20140415003304) do
     t.string   "status",           default: "new"
     t.boolean  "draft",            default: true
     t.text     "appform_field_19"
+    t.integer  "phase",            default: 1
+    t.text     "appform_field_20"
+    t.text     "appform_field_21"
+    t.text     "appform_field_22"
+    t.text     "appform_field_23"
+    t.text     "appform_field_24"
+    t.text     "appform_field_25"
+    t.text     "appform_field_26"
+    t.text     "appform_field_27"
+    t.text     "appform_field_28"
+    t.text     "appform_field_29"
+    t.text     "appform_field_30"
+    t.text     "appform_field_31"
+    t.text     "appform_field_32"
+    t.text     "appform_field_33"
+    t.text     "appform_field_34"
+    t.text     "appform_field_35"
+    t.text     "appform_field_36"
+    t.text     "appform_field_37"
+    t.text     "appform_field_38"
+    t.text     "appform_field_39"
+    t.text     "appform_field_40"
+    t.text     "appform_field_41"
+    t.text     "appform_field_42"
+    t.text     "appform_field_43"
+    t.text     "appform_field_44"
+    t.text     "appform_field_45"
+    t.text     "appform_field_46"
+    t.text     "appform_field_47"
+    t.text     "appform_field_48"
+    t.text     "appform_field_49"
   end
 
   create_table "disciplines", force: true do |t|
@@ -66,6 +97,7 @@ ActiveRecord::Schema.define(version: 20140415003304) do
     t.text     "resume"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "acc_application_id"
   end
 
   create_table "microposts", force: true do |t|

@@ -23,7 +23,8 @@
       <% end %>
     </h1>
   <% end %>
-    <h2><%= @acc_application.appform_field_1 %><br><small>Date submitted: <%= @acc_application.created_at.to_formatted_s(:long) %></small></h2><br>
+
+    <h2><%= @acc_application.appform_field_1 %><br><small>Last updated on: <%= @acc_application.updated_at.to_formatted_s(:long) %></small></h2><br>
     <h3>Applicant Basic Info & Background</h3>
     <p><strong><%= QUESTION_ONE %></strong><br>
       <%= @acc_application.appform_field_1 %></p>
@@ -32,7 +33,39 @@
     <p><strong><%= QUESTION_THREE %></strong><br>
       <%= @acc_application.appform_field_3 %></p>
     <p><strong><%= QUESTION_FOUR %></strong><br>
-      <%= @acc_application.appform_field_4 %></p>
+      <%= @acc_application.appform_field_4 %></p><br>
+
+    <% @acc_application.founders.each do | f |   %>
+
+        <div class="tableborder">
+          <table>
+            <tr>
+              <td><strong>First name</strong></td><td><%= f.firstname %><span style="padding-left: 10px"></span></td>
+              <td><strong>Last name</strong></td><td><%= f.lastname %><span style="padding-left: 10px"></span></td>
+              <td><strong>Email</strong></td><td><%= f.email %></td><br>
+            </tr>
+            <tr>
+              <td><strong>Address</strong></td> <td><%= f.address %><span style="padding-left: 10px"></span></td>
+              <td><strong>City</strong></td> <td><%= f.city %><span style="padding-left: 10px"></span></td>
+              <td><strong>State</strong></td> <td><%= f.state %><span style="padding-left: 10px"></span>
+              <strong>Zip</strong><%= f.zipcode %><span style="padding-left: 10px"></span></td><br>
+            </tr>
+            <tr>
+              <td><strong>Phone</strong></td> <td><%= f.phone %><span style="padding-left: 10px"></span></td>
+              <td><strong>Date of birth</strong></td> <td><%= f.dateofbirth %><span style="padding-left: 10px"></span></td>
+              <td><strong>Website</strong></td> <td><%= f.website %><span style="padding-left: 10px"></span></td><br>
+            <tr>
+              <td><strong>Company role</strong></td> <td><%= f.companyrole %><span style="padding-left: 10px"></span></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <strong>Education</strong><span style="padding-left: 19px"></span><%= f.education %><br><br>
+          <strong>Resume</strong><span style="padding-left: 32px"></span><%= f.resume  %><span style="padding-left: 10px"></span><br><br><br>
+        </div>
+
+    <% end %>
+
     <p><strong><%= QUESTION_FIVE %></strong><br>
       <%= @acc_application.appform_field_5 %></p>
     <p><strong><%= QUESTION_SIX %></strong><br>

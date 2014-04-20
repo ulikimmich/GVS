@@ -1,9 +1,10 @@
 class AccApplication < ActiveRecord::Base
 
   belongs_to :user
-  #has_many :founders
+  has_many :founders
+  accepts_nested_attributes_for :founders, :allow_destroy => true
 
-  default_scope -> { order('created_at DESC') }
+  default_scope -> { order('updated_at DESC') }
 
   # filter only applications that are submitted and not saved as drafts
   scope :draft, -> { where( draft: false ) }
