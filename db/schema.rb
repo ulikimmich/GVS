@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140419024843) do
+ActiveRecord::Schema.define(version: 20140421191230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,9 @@ ActiveRecord::Schema.define(version: 20140419024843) do
     t.boolean  "draft",            default: true
     t.text     "appform_field_19"
     t.integer  "phase",            default: 1
+  end
+
+  create_table "acc_phasetwos", force: true do |t|
     t.text     "appform_field_20"
     t.text     "appform_field_21"
     t.text     "appform_field_22"
@@ -72,6 +75,10 @@ ActiveRecord::Schema.define(version: 20140419024843) do
     t.text     "appform_field_47"
     t.text     "appform_field_48"
     t.text     "appform_field_49"
+    t.integer  "user_id"
+    t.string   "status",           default: "new"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "disciplines", force: true do |t|
