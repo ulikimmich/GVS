@@ -29,66 +29,34 @@
         </div>
 
         <h3>Part 1: Basic Franchise Proposal</h3>
-        <p>Please compile a basic franchise proposal summary for your startup for review by GVS Transmedia Accelerator Program.  Please try to address as many of the items below as your company is able - these questions will serve as a sort of diagnostic for facilitators to know where you are in your development process.</p><br>
-        <div class="form-group">
-          <%= f.label(:appform_field_20, QUESTION_TWENTY) %>
-          <%= f.text_area :appform_field_20, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_21, QUESTION_TWENTYONE) %>
-          <%= f.text_area :appform_field_21, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_22, QUESTION_TWENTYTWO) %>
-          <%= f.text_area :appform_field_22, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_23, QUESTION_TWENTYTHREE) %>
-          <%= f.text_area :appform_field_23, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_24, QUESTION_TWENTYFOUR) %>
-          <%= f.text_area :appform_field_24, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_25, QUESTION_TWENTYFIVE) %>
-          <%= f.text_area :appform_field_25, :class => "form-control", :cols => 40, :rows => 7 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_26, QUESTION_TWENTYSIX) %>
-          <%= f.text_area :appform_field_26, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_28, QUESTION_TWENTYEIGHT) %>
-          <%= f.text_area :appform_field_28, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_29, QUESTION_TWENTYNINE) %>
-          <%= f.text_area :appform_field_29, :class => "form-control", :cols => 40, :rows => 7 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_30, QUESTION_THIRTY) %>
-          <%= f.text_area :appform_field_30, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_31, QUESTION_THIRTYONE) %>
-          <%= f.text_area :appform_field_31, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_32, QUESTION_THIRTYTWO) %>
-          <%= f.text_area :appform_field_32, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_33, QUESTION_THIRTYTHREE) %>
-          <%= f.text_area :appform_field_33, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div>
-        <div class="form-group">
-          <%= f.label(:appform_field_34, QUESTION_THIRTYFOUR) %>
-          <%= f.text_area :appform_field_34, :class => "form-control", :cols => 40, :rows => 13 %>
-        </div><br>
+        <p>Please compile a basic franchise proposal for your startup for review by GVS Transmedia Accelerator Program.  This proposal should be sent as a digital package (zip file including all proposal materials) to: <%= mail_to "accel@globalvirtualstudio.com","accel@globalvirtualstudio.com" %> with the following subject line: “Franchise proposal: (your company’s name, lead applicant’s name)”.</p>
+        <p><strong>Please only send once all elements are completed and compiled.</strong></p>
+        <p>Download the checklist <%= link_to "here (PDF, 333KB)", "https://s3-us-west-2.amazonaws.com/gta-images/GTAPhase2checklist.pdf", :target => "_blank" %> which outlines elements for inclusion.  Please try to address as many of the items as your company is able - these questions will serve as a sort of diagnostic for facilitators to know where you are in your development process. Items marked with a * are required for consideration.</p>
+          <ol>
+            <li>*Short one-page synopsis of content/story for lead product/project</li>
+            <li>*Full current draft script</li>
+            <li>*Profile summary for additional transmedia products/projects</li>
+            <li>Do you have a development budget for your startup? If so, please include top sheet.</li>
+            <li>Initial proposals for project leadership with bios/resumes/reels</li>
+            <li>Potential team/talent (if applicable)</li>
+            <li>*An itemized summary with values of what has already been invested in the company (cash, goods and services in kind, other)</li>
+            <li>Any assets developed thus far for the company/company’s products (including concept design, previsualizations, web platform, fundraising materials, etc.)</li>
+            <li>Initial proposal for financing (list sources/structure)</li>
+            <li>Initial product(s) breakdown for execution (proposed process)</li>
+            <li>Projected budget top sheet for production phase</li>
+            <li>Projected schedule outline</li>
+            <li>Initial business plan summary (may include proforma, sales projections) and including plan for sustainability/ exit strategy</li>
+            <li>Initial marketing analysis summary</li>
+            <li>*Reference and/or original materials for artistic vision (videos, images, other promo or proposal materials to communicate the vision of the franchise)</li>
+          </ol>
+        </p><br>
         <h3>Part 2: Applicant Team Video Interview</h3>
         <div class="form-group">
           <%= f.label(:appform_field_35, QUESTION_THIRTYFIVE) %>
+          <p><ul><li>Tell us what you are passionate about as a storyteller.</li>
+            <li>Give us your “Elevator Pitch” of your transmedia franchise. (30-45 seconds)</li>
+            <li>What do you hope to achieve through the GVS Transmedia Accelerator?</li></ul>
+          </p>
           <%= f.text_area :appform_field_35, :class => "form-control", :cols => 40, :rows => 5 %>
         </div><br>
         <h3>Part 3: Please answer the following questions here on this form:</h3>
@@ -109,36 +77,36 @@
           <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTY) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+          <%= f.label(:appform_field_40, QUESTION_FORTY) %>
+          <%= f.text_area :appform_field_40, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYONE) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+          <%= f.label(:appform_field_41, QUESTION_FORTYONE) %>
+          <%= f.text_area :appform_field_42, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYTWO) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+          <%= f.label(:appform_field_42, QUESTION_FORTYTWO) %>
+          <%= f.text_area :appform_field_43, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYTHREE) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+          <%= f.label(:appform_field_43, QUESTION_FORTYTHREE) %>
+          <%= f.text_area :appform_field_43, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYFOUR) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+          <%= f.label(:appform_field_44, QUESTION_FORTYFOUR) %>
+          <%= f.text_area :appform_field_44, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYFIVE) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+          <%= f.label(:appform_field_45, QUESTION_FORTYFIVE) %>
+          <%= f.text_area :appform_field_45, :class => "form-control", :cols => 40, :rows => 13 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYSIX) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.label(:appform_field_46, QUESTION_FORTYSIX) %>
+          <%= f.text_area :appform_field_46, :class => "form-control", :cols => 40, :rows => 7 %>
         </div>
         <div class="form-group">
-          <%= f.label(:appform_field_39, QUESTION_FORTYSEVEN) %>
-          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 7 %>
+          <%= f.label(:appform_field_47, QUESTION_FORTYSEVEN) %>
+          <%= f.text_area :appform_field_47, :class => "form-control", :cols => 40, :rows => 7 %>
         </div>
 
         <h4>For questions visit the <%= link_to "Frequently Asked Questions", faq_path %> page.</h4><br>

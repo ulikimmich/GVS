@@ -22,53 +22,6 @@ class PhasetwoApplicationPdf < Prawn::Document
 
   def questions
     move_down 20
-    text "Part 1: Basic Franchise Proposal", size: 15
-    move_down 7
-    text QUESTION_TWENTY, style: :bold
-    text @phasetwo_application.appform_field_20
-    move_down 5
-    text QUESTION_TWENTYONE, style: :bold
-    text @phasetwo_application.appform_field_21
-    move_down 5
-    text QUESTION_TWENTYTWO, style: :bold
-    text @phasetwo_application.appform_field_22
-    move_down 5
-    text QUESTION_TWENTYTHREE, style: :bold
-    text @phasetwo_application.appform_field_23
-    move_down 5
-    text QUESTION_TWENTYFOUR, style: :bold
-    text @phasetwo_application.appform_field_24
-    move_down 5
-    text QUESTION_TWENTYFIVE, style: :bold
-    text @phasetwo_application.appform_field_25
-    move_down 5
-    text QUESTION_TWENTYSIX, style: :bold
-    text @phasetwo_application.appform_field_26
-    move_down 5
-    text QUESTION_TWENTYSEVEN, style: :bold
-    text @phasetwo_application.appform_field_27
-    move_down 5
-    text QUESTION_TWENTYEIGHT, style: :bold
-    text @phasetwo_application.appform_field_28
-    move_down 5
-    text QUESTION_TWENTYNINE, style: :bold
-    text @phasetwo_application.appform_field_29
-    move_down 5
-    text QUESTION_THIRTY, style: :bold
-    text @phasetwo_application.appform_field_30
-    move_down 5
-    text QUESTION_THIRTYONE, style: :bold
-    text @phasetwo_application.appform_field_31
-    move_down 5
-    text QUESTION_THIRTYTWO, style: :bold
-    text @phasetwo_application.appform_field_32
-    move_down 5
-    text QUESTION_THIRTYTHREE, style: :bold
-    text @phasetwo_application.appform_field_33
-    move_down 5
-    text QUESTION_THIRTYFOUR, style: :bold
-    text @phasetwo_application.appform_field_34
-    move_down 15
     text "Part 2: Applicant Team Video Interview", size: 15
     move_down 7
     text QUESTION_THIRTYFIVE, style: :bold

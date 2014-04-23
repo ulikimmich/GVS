@@ -116,8 +116,8 @@ class PhasetwoApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def acc_phasetwo_params
-      params.require(:phasetwo_application).permit(:status, :appform_field_20, :appform_field_21, :appform_field_22, :appform_field_23, :appform_field_24, :appform_field_25,
-                                              :appform_field_26, :appform_field_27, :appform_field_28, :appform_field_29, :appform_field_30, :appform_field_31,
-                                              :appform_field_32, :appform_field_33, :appform_field_34, :appform_field_35, :appform_field_36, :appform_field_37, :appform_field_38)
+      params.require(:phasetwo_application).permit(:status, :appform_field_35, :appform_field_36, :appform_field_37, :appform_field_38, :appform_field_39, :appform_field_40,
+                                              :appform_field_41, :appform_field_42, :appform_field_43, :appform_field_44, :appform_field_45, :appform_field_46,
+                                              :appform_field_47)
     end
 end
