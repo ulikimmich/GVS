@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :microposts, dependent: :destroy
   has_one :discipline
   has_one :acc_application
+  has_one :phasetwo_application
 
   has_attached_file :avatar, :styles => { :medium => "200x200>", :thumb => "50x50>" },
                     :default_url => ":style/default.png"

@@ -1,0 +1,133 @@
+<% #TODO embed Vimeo/Youtube player with corresponding link %>
+
+<%= render 'layouts/phasetwo_btn_editing' %>
+
+<div class="row well" xmlns="http://www.w3.org/1999/html">
+  <div class="col-sm-8 col-md-8">
+    <% if current_user.admin? %>
+        <h1>
+          <%
+             status = @phasetwo_application.status
+             case status
+               when "new"
+          %>
+              <h1 style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">New</h1>
+          <% when "phase 2" %>
+              <h1 style="background-color: #00e3ff; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">Phase 2</h1>
+          <% when "consider" %>
+              <h1 style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">Consider</h1>
+          <% when "recommend" %>
+              <h1 style="background-color: #F7CB2A; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">Recommend</h1>
+          <% when "pass" %>
+              <h1 style="background-color: #30BA40; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">Pass</h1>
+          <% when "incomplete" %>
+              <h1 style="background-color: #DE1D10; color: white; font-weight: bold; text-align: center;vertical-align: middle; padding-bottom: 8px">Incomplete</h1>
+          <% end %>
+        </h1>
+    <% end %>
+
+   <h2>Phase 2 Application<br>
+     <small>Last updated on: <%= @phasetwo_application.updated_at.to_formatted_s(:long) %></small></h2><br>
+    <h3>Part 1: Basic Franchise Proposal</h3>
+    <p><strong><%= QUESTION_TWENTY %></strong><br>
+      <%= @phasetwo_application.appform_field_20 %></p>
+    <p><strong><%= QUESTION_TWENTYONE %></strong><br>
+      <%= @phasetwo_application.appform_field_21 %></p>
+    <p><strong><%= QUESTION_TWENTYTWO %></strong><br>
+      <%= @phasetwo_application.appform_field_22 %></p>
+    <p><strong><%= QUESTION_TWENTYTHREE %></strong><br>
+      <%= @phasetwo_application.appform_field_23 %></p><br>
+    <p><strong><%= QUESTION_FOUR %></strong><br>
+      <%= @phasetwo_application.appform_field_24 %></p>
+    <p><strong><%= QUESTION_TWENTYFIVE %></strong><br>
+      <%= @phasetwo_application.appform_field_25 %></p>
+    <p><strong><%= QUESTION_TWENTYSIX %></strong><br>
+      <%= @phasetwo_application.appform_field_26 %></p>
+    <p><strong><%= QUESTION_TWENTYSEVEN %></strong><br>
+      <%= @phasetwo_application.appform_field_27 %></p>
+    <p><strong><%= QUESTION_TWENTYEIGHT %></strong><br>
+      <%= @phasetwo_application.appform_field_28 %></p>
+    <p><strong><%= QUESTION_TWENTYNINE %></strong><br>
+      <%= @phasetwo_application.appform_field_29 %></p>
+    <p><strong><%= QUESTION_THIRTY %></strong><br>
+      <%= @phasetwo_application.appform_field_30 %></p>
+    <p><strong><%= QUESTION_THIRTYONE %></strong><br>
+      <%= @phasetwo_application.appform_field_31 %></p>
+    <p><strong><%= QUESTION_THIRTYTWO %></strong><br>
+      <%= @phasetwo_application.appform_field_32 %></p>
+    <p><strong><%= QUESTION_THIRTYTHREE %></strong><br>
+      <%= @phasetwo_application.appform_field_33 %></p>
+    <p><strong><%= QUESTION_THIRTYFOUR %></strong><br>
+      <%= @phasetwo_application.appform_field_34 %></p>
+    <h3>Part 2: Applicant Team Video Interview</h3>
+    <p><strong><%= QUESTION_THIRTYFIVE %></strong><br>
+      <%= @phasetwo_application.appform_field_35 %></p>
+    <h3>Part 3: Please answer the following questions here on this form:</h3>
+    <p><strong><%= QUESTION_THIRTYSIX %></strong><br>
+      <%= @phasetwo_application.appform_field_36 %></p>
+    <p><strong><%= QUESTION_THIRTYSEVEN %></strong><br>
+      <%= @phasetwo_application.appform_field_37 %></p>
+    <p><strong><%= QUESTION_THIRTYEIGHT %></strong><br>
+      <%= @phasetwo_application.appform_field_38 %></p>
+    <p><strong><%= QUESTION_THIRTYNINE %></strong><br>
+      <%= @phasetwo_application.appform_field_39 %></p>
+    <p><strong><%= QUESTION_FORTY %></strong><br>
+      <%= @phasetwo_application.appform_field_40 %></p>
+    <p><strong><%= QUESTION_FORTYONE %></strong><br>
+      <%= @phasetwo_application.appform_field_41 %></p>
+    <p><strong><%= QUESTION_FORTYTWO %></strong><br>
+      <%= @phasetwo_application.appform_field_42 %></p>
+    <p><strong><%= QUESTION_FORTYTHREE %></strong><br>
+      <%= @phasetwo_application.appform_field_43 %></p>
+    <p><strong><%= QUESTION_FORTYFOUR %></strong><br>
+      <%= @phasetwo_application.appform_field_44 %></p>
+    <p><strong><%= QUESTION_FORTYFIVE %></strong><br>
+      <%= @phasetwo_application.appform_field_45 %></p>
+    <p><strong><%= QUESTION_FORTYSIX %></strong><br>
+      <%= @phasetwo_application.appform_field_46 %></p>
+    <p><strong><%= QUESTION_FORTYSEVEN %></strong><br>
+      <%= @phasetwo_application.appform_field_47 %></p>
+    <br>
+  </div>
+
+  <!-- only show comments when user is admin -->
+  <% if current_user.admin? %>
+      <div class="col-sm-4 col-md-4 sidebar">
+        <h3>Contact info </h3>
+        Name: <%= @phasetwo_application.user.name %><br>
+        Email: <%= @phasetwo_application.user.email %><br>
+        <div><hr></div>
+        <div id="disqus_thread" style="margin-top: 50px"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'globalvirtualstudio'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'globalvirtualstudio'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var s = document.createElement('script'); s.async = true;
+                s.type = 'text/javascript';
+                s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+            }());
+        </script>
+      </div>
+  <% end %>
+</div>
+<%= render 'layouts/phasetwo_btn_editing' %>
+
+
+

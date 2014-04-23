@@ -12,10 +12,12 @@ class ApplicationPdf < Prawn::Document
   end
 
   def header
+    text "Phase 1 Application", size: 20
+    move_down 16
     text "Contact info: #{@acc_application.user.name}, #{@acc_application.user.email}", size: 10
     move_down 10
     text "Company: #{@acc_application.appform_field_1}", size: 18, style: :bold
-    text "Submitted on: #{@acc_application.created_at.to_date}"
+    text "Submitted on: #{@acc_application.updated_at.to_date}"
   end
 
   def questions

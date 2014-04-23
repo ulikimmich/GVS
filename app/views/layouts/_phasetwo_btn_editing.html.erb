@@ -1,0 +1,13 @@
+<% if current_user.admin? %>
+    <%= link_to '<span class="glyphicon glyphicon-chevron-left"></span>&nbsp;&nbsp;Back to Listing'.html_safe, acc_applications_path, class: "btn btn-sm btn-primary" %>
+<% end %>
+<% if current_user.admin? || current_user.phasetwo_application %>
+    <% if current_user.admin? || current_user.phasetwo_application.draft?  %>
+        <span style="margin-left: 10px">&nbsp;</span>
+        <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit Application'.html_safe, edit_phasetwo_application_path(@phasetwo_application), class: "btn btn-sm btn-primary" %>
+    <% end %>
+<span style="margin-left: 20px">&nbsp;</span>
+    <%= link_to '<span class="glyphicon glyphicon-save" style="padding-right:6px"></span>Download PDF'.html_safe, phasetwo_application_path(@phasetwo_application, format: "pdf") %>
+<% end %>
+    <%= link_to '<span class="glyphicon glyphicon-question-sign" style="padding-right:6px; padding-left:20px"></span>FAQ'.html_safe, faq_path %>
+    <br><br>

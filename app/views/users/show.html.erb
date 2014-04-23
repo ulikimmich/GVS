@@ -28,8 +28,17 @@
   </div>
 
 <% if @user.acc_application %>
-    <h1>Your Application</h1><br>
-    <%= render "layouts/acc_application" %>
+    <% if @user.phasetwo_application %>
+        <%= render "layouts/phasetwo_application" %>
+    <% else %>
+        <% if @user.acc_application.status == "phase 2" && !@user.phasetwo_application %>
+            <h1>Phase 2 Application</h1><br>
+            <%= link_to 'New Phase 2 Application', new_phasetwo_application_path, class: "btn btn-md btn-primary"  %>
+        <% else %>
+            <h1>Phase 1 Application</h1><br>
+            <%= render "layouts/acc_application" %>
+        <% end %>
+    <% end %>
 <% elsif !current_user.admin?%>
     <%= link_to 'New Application', new_acc_application_path, class: "btn btn-md btn-primary"  %>
 <% end %>

@@ -1,6 +1,6 @@
-class CreateAccPhasetwos < ActiveRecord::Migration
+class CreatePhasetwoApplications < ActiveRecord::Migration
   def change
-    create_table :acc_phasetwos do |t|
+    create_table :phasetwo_applications do |t|
       t.text    :appform_field_20
       t.text    :appform_field_21
       t.text    :appform_field_22
@@ -31,6 +31,7 @@ class CreateAccPhasetwos < ActiveRecord::Migration
       t.text    :appform_field_47
       t.text    :appform_field_48
       t.text    :appform_field_49
+      t.boolean :draft, default: true
       t.integer :user_id
       t.string  :status, default: "new"
 

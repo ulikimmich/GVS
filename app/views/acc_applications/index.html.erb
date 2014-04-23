@@ -1,7 +1,6 @@
-<h2 style="margin-top: -50px">Applications listing</h2>
-<br>
-
-<div class="well">
+<div class="well" style="margin-top: -30px">
+  <h2>Phase 1 Applications listing (<%= @acc_applications.size %>)</h2>
+  <br>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -30,6 +29,8 @@
               when "new"
         %>
               <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">New</td>
+            <% when "phase 2" %>
+                <td style="background-color: #00e3ff; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Phase 2</td>
             <% when "consider" %>
               <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Consider</td>
             <% when "recommend" %>
@@ -41,11 +42,67 @@
             <% end %>
         <% end %>
         <td style="text-align: center">
-          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs", id: "btn-xs-padding" %>
+          <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, acc_application, class: "btn btn-success btn-xs", id: "btn-xs-padding" %>&nbsp;
           <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_acc_application_path(acc_application), class: "btn btn-primary btn-xs", id: "btn-xs-padding" %>
-          <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, acc_application, class: "btn btn-danger btn-xs", id: "btn-xs-padding", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<!--
+          <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, acc_application, class: "btn btn-danger btn-xs", id: "btn-xs-padding", method: :delete, data: { confirm: 'Are you sure?' } %>
+-->
+        </td></tr>
     <% end %>
   </tbody>
 </table>
+<hr>
+
+  <h2 style="margin-top: 30px">Phase 2 Applications listing (<%= @phasetwo_applications.size %>)</h2>
+  <br>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Company Name</th>
+      <th>Name of Applicant</th>
+      <th>Date Updated</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @phasetwo_applications.each do |phasetwo_application| %>
+        <tr>
+          <td><%= link_to phasetwo_application.id, phasetwo_application %></td>
+          <td><%= link_to phasetwo_application.user.acc_application.appform_field_1, phasetwo_application %></td>
+          <td><%= link_to phasetwo_application.user.name, phasetwo_application.user %></td>
+          <td><%= phasetwo_application.updated_at.to_formatted_s(:long) %></td>
+
+          <% if phasetwo_application.draft?  %>
+              <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">DRAFT</td>
+          <%  else
+                status = phasetwo_application.status
+                case status
+                  when "new"
+          %>
+                  <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">New</td>
+              <% when "phase 2" %>
+                  <td style="background-color: #00e3ff; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Phase 2</td>
+              <% when "consider" %>
+                  <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Consider</td>
+              <% when "recommend" %>
+                  <td style="background-color: #F7CB2A; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Recommend</td>
+              <% when "pass" %>
+                  <td style="background-color: #30BA40; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 5%">Pass</td>
+              <% when "incomplete" %>
+                  <td style="background-color: #DE1D10; color: white; font-weight: bold; text-align: center;vertical-align: middle">Incomplete</td>
+              <% end %>
+          <% end %>
+          <td style="text-align: center">
+            <%= link_to '<span class="glyphicon glyphicon-eye-open"></span>&nbsp;&nbsp;Show'.html_safe, phasetwo_application, class: "btn btn-success btn-xs", id: "btn-xs-padding" %>&nbsp;
+            <%= link_to '<span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit'.html_safe, edit_phasetwo_application_path(phasetwo_application), class: "btn btn-primary btn-xs", id: "btn-xs-padding" %>
+            <!--
+          <%= link_to '<span class="glyphicon glyphicon-remove-sign"></span>&nbsp;&nbsp;Destroy'.html_safe, phasetwo_application, class: "btn btn-danger btn-xs", id: "btn-xs-padding", method: :delete, data: { confirm: 'Are you sure?' } %>
+-->
+          </td></tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>

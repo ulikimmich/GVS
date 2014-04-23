@@ -15,9 +15,17 @@ class AccApplicationsController < ApplicationController
         usr.acc_application
       end
 
+      #save all users phase 2 applications in array
+      phasetwo_applications = @users.map do |usr|
+        usr.phasetwo_application
+      end
+
       #remove nil objects from array
       a = applications.compact
       @acc_applications = a.sort {|x,y|  y.updated_at <=> x.updated_at }
+
+      b = phasetwo_applications.compact
+      @phasetwo_applications = b.sort {|x,y|  y.updated_at <=> x.updated_at }
     else
       redirect_to root_path
     end
@@ -90,6 +98,7 @@ class AccApplicationsController < ApplicationController
       else
         if @acc_application.update(acc_application_params)
           @acc_application.update_attribute(:draft, false)
+          @acc_application.update_attribute(:phase, 2)
           format.html { redirect_to @acc_application }
           flash[:success] = 'Application was successfully submitted.'
           format.json { head :no_content }
@@ -111,18 +120,18 @@ class AccApplicationsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_acc_application
-      @acc_application = AccApplication.find(params[:id])
-    end
+    private
+      # Use callbacks to share common setup or constraints between actions.
+      def set_acc_application
+        @acc_application = AccApplication.find(params[:id])
+      end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def acc_application_params
-      params.require(:acc_application).permit(:status, :appform_field_1, :appform_field_2, :appform_field_3, :appform_field_4, :appform_field_5, :appform_field_6,
-                                              :appform_field_7, :appform_field_8, :appform_field_9, :appform_field_10, :appform_field_11, :appform_field_12,
-                                              :appform_field_13, :appform_field_14, :appform_field_15, :appform_field_16, :appform_field_17, :appform_field_18, :appform_field_19,
-                                              founders_attributes: [:id, :firstname, :lastname, :email, :companyrole, :address, :city, :state, :zipcode, :phone, :dateofbirth, :website,
-                                              :education, :resume])
-    end
+      # Never trust parameters from the scary internet, only allow the white list through.
+      def acc_application_params
+        params.require(:acc_application).permit(:status, :appform_field_1, :appform_field_2, :appform_field_3, :appform_field_4, :appform_field_5, :appform_field_6,
+                                                :appform_field_7, :appform_field_8, :appform_field_9, :appform_field_10, :appform_field_11, :appform_field_12,
+                                                :appform_field_13, :appform_field_14, :appform_field_15, :appform_field_16, :appform_field_17, :appform_field_18, :appform_field_19,
+                                                founders_attributes: [:id, :firstname, :lastname, :email, :companyrole, :address, :city, :state, :zipcode, :phone, :dateofbirth, :website,
+                                                :education, :resume])
+      end
 end

@@ -1,6 +1,6 @@
 <% provide(:title, 'All users') %>
 
-<h2 style="margin-top: -50px">All Startups(<%= @users.all.size %>)</h2>
+<h2 style="margin-top: -50px">All Startups (<%= @users.all.size %>)</h2>
 <div class="google-maps">
   <div id="map" style='width: 1140px; height: 400px;'></div>
 </div>
@@ -23,7 +23,7 @@
           <strong>
             <!-- If user is registered and filled out application form show company name else show 'No application'  -->
           <% if user.acc_application.nil? %>
-                No application
+                No application yet
           <% else %>
                 <%= link_to user.acc_application.appform_field_1.truncate(17), user %>
           <% end %>

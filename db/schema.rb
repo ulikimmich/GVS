@@ -44,43 +44,6 @@ ActiveRecord::Schema.define(version: 20140421191230) do
     t.integer  "phase",            default: 1
   end
 
-  create_table "acc_phasetwos", force: true do |t|
-    t.text     "appform_field_20"
-    t.text     "appform_field_21"
-    t.text     "appform_field_22"
-    t.text     "appform_field_23"
-    t.text     "appform_field_24"
-    t.text     "appform_field_25"
-    t.text     "appform_field_26"
-    t.text     "appform_field_27"
-    t.text     "appform_field_28"
-    t.text     "appform_field_29"
-    t.text     "appform_field_30"
-    t.text     "appform_field_31"
-    t.text     "appform_field_32"
-    t.text     "appform_field_33"
-    t.text     "appform_field_34"
-    t.text     "appform_field_35"
-    t.text     "appform_field_36"
-    t.text     "appform_field_37"
-    t.text     "appform_field_38"
-    t.text     "appform_field_39"
-    t.text     "appform_field_40"
-    t.text     "appform_field_41"
-    t.text     "appform_field_42"
-    t.text     "appform_field_43"
-    t.text     "appform_field_44"
-    t.text     "appform_field_45"
-    t.text     "appform_field_46"
-    t.text     "appform_field_47"
-    t.text     "appform_field_48"
-    t.text     "appform_field_49"
-    t.integer  "user_id"
-    t.string   "status",           default: "new"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "disciplines", force: true do |t|
     t.string   "name"
     t.integer  "user_id"
@@ -115,6 +78,44 @@ ActiveRecord::Schema.define(version: 20140421191230) do
   end
 
   add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at", using: :btree
+
+  create_table "phasetwo_applications", force: true do |t|
+    t.text     "appform_field_20"
+    t.text     "appform_field_21"
+    t.text     "appform_field_22"
+    t.text     "appform_field_23"
+    t.text     "appform_field_24"
+    t.text     "appform_field_25"
+    t.text     "appform_field_26"
+    t.text     "appform_field_27"
+    t.text     "appform_field_28"
+    t.text     "appform_field_29"
+    t.text     "appform_field_30"
+    t.text     "appform_field_31"
+    t.text     "appform_field_32"
+    t.text     "appform_field_33"
+    t.text     "appform_field_34"
+    t.text     "appform_field_35"
+    t.text     "appform_field_36"
+    t.text     "appform_field_37"
+    t.text     "appform_field_38"
+    t.text     "appform_field_39"
+    t.text     "appform_field_40"
+    t.text     "appform_field_41"
+    t.text     "appform_field_42"
+    t.text     "appform_field_43"
+    t.text     "appform_field_44"
+    t.text     "appform_field_45"
+    t.text     "appform_field_46"
+    t.text     "appform_field_47"
+    t.text     "appform_field_48"
+    t.text     "appform_field_49"
+    t.boolean  "draft",            default: true
+    t.integer  "user_id"
+    t.string   "status",           default: "new"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

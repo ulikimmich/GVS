@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   def show
       @user = User.find(params[:id])
       @acc_application = @user.acc_application
+      @phasetwo_application = @user.phasetwo_application
   end
 
   def create

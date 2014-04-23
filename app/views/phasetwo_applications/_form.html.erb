@@ -1,0 +1,156 @@
+<% provide(:title, 'GVS Accelerator | Phase 2 Application Form') %>
+
+<%= form_for @phasetwo_application, :html => { :multipart => true } do |f| %>
+  <% if @phasetwo_application.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@phasetwo_application.errors.count, "error") %> prohibited this application from being saved:</h4>
+
+      <ul>
+      <% @phasetwo_application.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="row well" id="rowspacer">
+      <div class="col-md-10">
+        <h2>Application Form: Phase 2</h2><br>
+        <% if current_user.admin? %>
+            <div class="form-group">
+              <%= f.label(:status, 'Status') %>
+              <%= select(:phasetwo_application, :status, [['new', 'new'], ['phase 2', 'phase 2'], ['pass', 'pass'], ['consider', 'consider'], ['recommend', 'recommend'], ['incomplete', 'incomplete'] ], :class => "form-control") %>
+            </div>
+        <% end %>
+        <div class="alert alert-info alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <p><strong>Items with a * are required for consideration.</strong></p>
+          <p>Saving the application as a draft allows you to edit the application at a later time. After you are finished with your application, select "Submit Application" and your application will be delivered.  You will no longer be able to make edits to your application after you submit.</p>
+        </div>
+
+        <h3>Part 1: Basic Franchise Proposal</h3>
+        <p>Please compile a basic franchise proposal summary for your startup for review by GVS Transmedia Accelerator Program.  Please try to address as many of the items below as your company is able - these questions will serve as a sort of diagnostic for facilitators to know where you are in your development process.</p><br>
+        <div class="form-group">
+          <%= f.label(:appform_field_20, QUESTION_TWENTY) %>
+          <%= f.text_area :appform_field_20, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_21, QUESTION_TWENTYONE) %>
+          <%= f.text_area :appform_field_21, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_22, QUESTION_TWENTYTWO) %>
+          <%= f.text_area :appform_field_22, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_23, QUESTION_TWENTYTHREE) %>
+          <%= f.text_area :appform_field_23, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_24, QUESTION_TWENTYFOUR) %>
+          <%= f.text_area :appform_field_24, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_25, QUESTION_TWENTYFIVE) %>
+          <%= f.text_area :appform_field_25, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_26, QUESTION_TWENTYSIX) %>
+          <%= f.text_area :appform_field_26, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_28, QUESTION_TWENTYEIGHT) %>
+          <%= f.text_area :appform_field_28, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_29, QUESTION_TWENTYNINE) %>
+          <%= f.text_area :appform_field_29, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_30, QUESTION_THIRTY) %>
+          <%= f.text_area :appform_field_30, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_31, QUESTION_THIRTYONE) %>
+          <%= f.text_area :appform_field_31, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_32, QUESTION_THIRTYTWO) %>
+          <%= f.text_area :appform_field_32, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_33, QUESTION_THIRTYTHREE) %>
+          <%= f.text_area :appform_field_33, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_34, QUESTION_THIRTYFOUR) %>
+          <%= f.text_area :appform_field_34, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div><br>
+        <h3>Part 2: Applicant Team Video Interview</h3>
+        <div class="form-group">
+          <%= f.label(:appform_field_35, QUESTION_THIRTYFIVE) %>
+          <%= f.text_area :appform_field_35, :class => "form-control", :cols => 40, :rows => 5 %>
+        </div><br>
+        <h3>Part 3: Please answer the following questions here on this form:</h3>
+        <div class="form-group">
+          <%= f.label(:appform_field_36, QUESTION_THIRTYSIX) %>
+          <%= f.text_area :appform_field_36, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_37, QUESTION_THIRTYSEVEN) %>
+          <%= f.text_area :appform_field_37, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_38, QUESTION_THIRTYEIGHT) %>
+          <%= f.text_area :appform_field_38, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_THIRTYNINE) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTY) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYONE) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYTWO) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYTHREE) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYFOUR) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYFIVE) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 13 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYSIX) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+        <div class="form-group">
+          <%= f.label(:appform_field_39, QUESTION_FORTYSEVEN) %>
+          <%= f.text_area :appform_field_39, :class => "form-control", :cols => 40, :rows => 7 %>
+        </div>
+
+        <h4>For questions visit the <%= link_to "Frequently Asked Questions", faq_path %> page.</h4><br>
+        <div class="actions">
+          <% if current_user.admin? %>
+              <%= f.submit "Save as Draft", class: "btn btn-lg btn-success" %>
+          <% else %>
+              <%= f.submit "Submit Application", class: "btn btn-lg btn-success" %>
+              <span style="padding-left: 20px"></span><%= f.submit "Save as Draft",  class: "btn btn-default btn-success" %>
+          <% end %>
+        </div>
+      </div>
+     </div>
+
+<% end %>
