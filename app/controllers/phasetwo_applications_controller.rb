@@ -58,13 +58,25 @@ class PhasetwoApplicationsController < ApplicationController
     @phasetwo_application = current_user.build_phasetwo_application(acc_phasetwo_params)
 
     respond_to do |format|
-      if @phasetwo_application.save
-        format.html { redirect_to @phasetwo_application }
-        flash[:success] = 'Application was successfully created.'
-        format.json { render action: 'show', status: :created, location: @phasetwo_application }
+      if params[:commit] == "Save as Draft"
+        if @phasetwo_application.save
+          format.html { redirect_to @phasetwo_application }
+          flash[:success] = 'Phase 2 Application was successfully created and saved as draft.'
+          format.json { render action: 'show', status: :created, location: @phasetwo_application }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @phasetwo_application.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { render action: 'new' }
-        format.json { render json: @phasetwo_application.errors, status: :unprocessable_entity }
+        if @phasetwo_application.save
+          @phasetwo_application.update_attribute(:draft, false)
+          format.html { redirect_to @phasetwo_application }
+          flash[:success] = 'Phase 2 Application was successfully created and submitted.'
+          format.json { render action: 'show', status: :created, location: @phasetwo_application }
+        else
+          format.html { render action: 'new' }
+          format.json { render json: @phasetwo_application.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -77,7 +89,7 @@ class PhasetwoApplicationsController < ApplicationController
       if params[:commit] == "Save as Draft"
         if @phasetwo_application.update(acc_phasetwo_params)
           format.html { redirect_to @phasetwo_application }
-          flash[:success] = 'Application was successfully saved.'
+          flash[:success] = 'Phase 2 Application was successfully saved.'
           format.json { head :no_content }
         else
           format.html { render action: 'edit' }
@@ -87,7 +99,7 @@ class PhasetwoApplicationsController < ApplicationController
         if @phasetwo_application.update(acc_phasetwo_params)
           @phasetwo_application.update_attribute(:draft, false)
           format.html { redirect_to @phasetwo_application }
-          flash[:success] = 'Application was successfully submitted.'
+          flash[:success] = 'Phase 2 Application was successfully submitted.'
           format.json { head :no_content }
         else
           format.html { render action: 'edit' }

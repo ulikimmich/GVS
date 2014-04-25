@@ -70,14 +70,27 @@ class AccApplicationsController < ApplicationController
     @acc_application = current_user.build_acc_application(acc_application_params)
 
     respond_to do |format|
+    if params[:commit] == "Save as Draft"
       if @acc_application.save
         format.html { redirect_to @acc_application }
-        flash[:success] = 'Application was successfully created.'
+        flash[:success] = 'Application was successfully created and saved as draft.'
         format.json { render action: 'show', status: :created, location: @acc_application }
       else
         format.html { render action: 'new' }
         format.json { render json: @acc_application.errors, status: :unprocessable_entity }
       end
+    else
+      if @acc_application.save
+        @acc_application.update_attribute(:draft, false)
+        @acc_application.update_attribute(:phase, 2)
+        format.html { redirect_to @acc_application }
+        flash[:success] = 'Application was successfully created and submitted.'
+        format.json { render action: 'show', status: :created, location: @acc_application }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @acc_application.errors, status: :unprocessable_entity }
+      end
+    end
     end
   end
 
