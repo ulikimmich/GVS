@@ -19,7 +19,8 @@
         <% if current_user.admin? %>
             <div class="form-group">
               <%= f.label(:status, 'Status') %>
-              <%= select(:acc_application, :status, [['new', 'new'], ['phase 2', 'phase 2'], ['pass', 'pass'], ['consider', 'consider'], ['recommend', 'recommend'], ['incomplete', 'incomplete'] ], :class => "form-control") %>
+              <%= select(:acc_application, :status, [['new', 'new'], ['incomplete', 'incomplete'], ['consider', 'consider'], ['in review', 'in review'],
+                                                     ['phase 2', 'phase 2'], ['pass', 'pass'], ['recommend', 'recommend'] ], :class => "form-control") %>
             </div>
         <% end %>
         <div class="alert alert-info alert-dismissable">
