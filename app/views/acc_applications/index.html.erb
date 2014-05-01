@@ -17,9 +17,9 @@
     <% @acc_applications.each do |acc_application| %>
       <tr>
         <td><%= link_to acc_application.id, acc_application %></td>
-        <td><%= link_to acc_application.appform_field_1, acc_application %></td>
-        <td><%= link_to acc_application.user.name, acc_application.user %></td>
-        <td><%= acc_application.updated_at.to_formatted_s(:long) %></td>
+        <td style="width: 35%"><%= link_to acc_application.appform_field_1, acc_application %></td>
+        <td style="width: 15%"><%= link_to acc_application.user.name, acc_application.user %></td>
+        <td style="width: 17%"><%= acc_application.updated_at.to_formatted_s(:long) %></td>
 
         <% if acc_application.draft?  %>
              <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">DRAFT</td>
@@ -73,9 +73,9 @@
     <% @phasetwo_applications.each do |phasetwo_application| %>
         <tr>
           <td><%= link_to phasetwo_application.id, phasetwo_application %></td>
-          <td><%= link_to phasetwo_application.user.acc_application.appform_field_1, phasetwo_application %></td>
-          <td><%= link_to phasetwo_application.user.name, phasetwo_application.user %></td>
-          <td><%= phasetwo_application.updated_at.to_formatted_s(:long) %></td>
+          <td style="width: 35%"><%= link_to phasetwo_application.user.acc_application.appform_field_1, phasetwo_application %></td>
+          <td style="width: 15%"><%= link_to phasetwo_application.user.name, phasetwo_application.user %></td>
+          <td style="width: 17%"><%= phasetwo_application.updated_at.to_formatted_s(:long) %></td>
 
           <% if phasetwo_application.draft?  %>
               <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">DRAFT</td>
