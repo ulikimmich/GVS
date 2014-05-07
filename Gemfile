@@ -14,6 +14,7 @@ gem 'gmaps4rails'
 gem 'geocoder'
 gem 'aws-sdk'
 gem 'prawn'
+gem 'newrelic_rpm'
 
 # Use sqlite3 as the database for Active Record
 group :development do
