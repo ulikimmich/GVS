@@ -22,7 +22,7 @@
         <td style="width: 17%"><%= acc_application.updated_at.to_formatted_s(:long) %></td>
 
         <% if acc_application.draft?  %>
-             <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">DRAFT</td>
+             <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 10%">DRAFT</td>
         <%  else
               status = acc_application.status
               case status
@@ -31,8 +31,8 @@
               <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">New</td>
             <% when "phase 2" %>
                 <td style="background-color: #00e3ff; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">Phase 2</td>
-            <% when "in review" %>
-                <td style="background-color: #ff08d2; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">In Review</td>
+            <% when "in discussion" %>
+                <td style="background-color: #ff08d2; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">In Discussion</td>
             <% when "consider" %>
               <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">Consider</td>
             <% when "recommend" %>
@@ -78,7 +78,7 @@
           <td style="width: 17%"><%= phasetwo_application.updated_at.to_formatted_s(:long) %></td>
 
           <% if phasetwo_application.draft?  %>
-              <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">DRAFT</td>
+              <td style="background-color: #525254; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 10%">DRAFT</td>
           <%  else
                 status = phasetwo_application.status
                 case status
@@ -87,8 +87,8 @@
                   <td style="background-color: #5165E8; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">New</td>
               <% when "phase 2" %>
                   <td style="background-color: #00e3ff; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">Phase 2</td>
-              <% when "in review" %>
-                  <td style="background-color: #ff08d2; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">In Review</td>
+              <% when "in discussion" %>
+                  <td style="background-color: #ff08d2; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">In Discussion</td>
               <% when "consider" %>
                   <td style="background-color: #FF6A19; color: white; font-weight: bold; text-align: center;vertical-align: middle; width: 9%">Consider</td>
               <% when "recommend" %>
