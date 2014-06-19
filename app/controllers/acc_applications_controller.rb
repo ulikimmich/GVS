@@ -1,6 +1,8 @@
 class AccApplicationsController < ApplicationController
   before_action :set_acc_application, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user
+  before_action :correct_user,    only: [ :edit, :show, :update ]
+
 
 
   # GET /acc_applications
@@ -134,6 +136,13 @@ class AccApplicationsController < ApplicationController
   end
 
     private
+
+    def correct_user
+      if !current_user.admin?
+        redirect_to(root_url) unless current_user?(@acc_application.user)
+      end
+    end
+
       # Use callbacks to share common setup or constraints between actions.
       def set_acc_application
         @acc_application = AccApplication.find(params[:id])

@@ -1,6 +1,8 @@
 class PhasetwoApplicationsController < ApplicationController
   before_action :set_phasetwo_application, only: [:show, :edit, :update, :destroy]
   before_action :signed_in_user
+  before_action :correct_user,    only: [ :edit, :show, :update ]
+
 
   # GET /phasetwo_application
   # GET /phasetwo_application.json
@@ -121,6 +123,14 @@ class PhasetwoApplicationsController < ApplicationController
 
 
   private
+
+
+    def correct_user
+      if !current_user.admin?
+        redirect_to(root_url) unless current_user?(@phasetwo_application.user)
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_phasetwo_application
       @phasetwo_application = PhasetwoApplication.find(params[:id])
