@@ -1,0 +1,500 @@
+    2  rails s
+    3  cd Sites/Rails\ Projects/gesund-jetzt/
+    4  ls
+    5  git status
+    6  git push heroku
+    7  git push heroku master
+    8  git push heroku master
+    9  git add .
+   10  git git commit -m "Commit"
+   11  git commit -m "Commit"
+   12  git push heroku master
+   13  git push heroku master
+   14  heroku open
+   15  git push heroku master
+   16  heroku logs
+   17  git push heroku master
+   18  git push heroku master
+   19  git push heroku master
+   20  git push heroku master
+   21  git push heroku master
+   22  git push heroku master
+   23  git push heroku master
+   24  git push heroku master
+   25  git push heroku master
+   26  cd Sites/Rails\ Projects/gesund-jetzt/
+   27  ruby -version
+   28  rvm install ruby-2.0.0-p353'
+   29  'rvm rvmrc warning ignore /Users/Beast/Sites/Rails Projects/gesund-jetzt/Gemfile
+   30  git push heroku
+   31  heroku open
+   32  git push heroku
+   33  git push heroku
+   34  git push heroku
+   35  git push heroku
+   36  git push heroku
+   37  git push heroku
+   38  git push heroku
+   39  git push heroku
+   40  git push heroku
+   41  git push heroku
+   42  git push heroku
+   43  git push heroku
+   44  cd Sites/Rails\ Projects/gesund-jetzt/
+   45  ls
+   46  git status
+   47  git push heroku
+   48  git push heroku
+   49  cd .
+   50  cd ..
+   51  ls
+   52  $ rails new rails-stripe-membership-saas -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+   53  rails new rails-stripe-membership-saas -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+   54  `gem install binding_of_caller -v '0.7.2'
+   55  cd rails-stripe-membership-saas/
+   56  ls
+   57  gem install binding_of_caller -v '0.7.2'
+   58  ls
+   59  bundle install
+   60  bundle install
+   61  cd ..
+   62  ls
+   63  cd /
+   64  ls
+   65  cd ~
+   66  ls
+   67  cd Sites/Rails\ Projects/
+   68  ls
+   69  git clone git://github.com/RailsApps/rails-stripe-membership-saas.git
+   70  ls
+   71  cd rails-stripe-membership-saas/
+   72  bundle install
+   73  gem install binding_of_caller 
+   74  ls -la gcc-4.2
+   75  which gcc
+   76  ln -s /usr/bin/gcc /usr/bin/gcc-4.2
+   77  sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
+   78  bundle install
+   79  gem install nokogiri -v '1.5.9'
+   80  brew install libxml2 libxslt
+   81  gem install nokogiri
+   82  bundle install
+   83  gem install eventmachine -v '1.0.3'`
+   84  gem install eventmachine -v '1.0.3'
+   85  which g++
+   86  ln /usr/bin/g++ /usr/bin/g++-4.2
+   87  sudo ln /usr/bin/g++ /usr/bin/g++-4.2
+   88  bundle install
+   89  rake db:migrate
+   90  rails s
+   91  git status
+   92  git init
+   93  git status
+   94  bundle exec install
+   95  bundle exec
+   96  rake db:seed
+   97  cd Sites/Rails\ Projects/
+   98  ls
+   99  ls
+  100  git clone git://github.com/RailsApps/rails-stripe-membership-saas.git
+  101  cd rails-stripe-membership-saas
+  102  ls
+  103  bundle install
+  104  bundle exec install
+  105  bundle exec install
+  106  bundle update
+  107  rake secret
+  108  rvm --version
+  109  ruby --version
+  110  rvm
+  111  cd Sites/Rails\ Projects/rails-stripe-membership-saas/
+  112  rvm install ruby-2.0.0-p353'
+  113  rvm install ruby-2.0.0-p353
+  114  git status
+  115  git add .
+  116  git status
+  117  git commit -m "asset files added"
+  118  git status
+  119  bundle exec install
+  120  rbenv
+  121  rbenv which
+  122  rake
+  123  rake db:migrate
+  124  ruby -v
+  125  ruby --version
+  126  rbenv versions
+  127  rbenv versions
+  128  rbenv rehash
+  129  ruby -v
+  130  git rm .rubyversion
+  131  ruby -v
+  132  rake
+  133  bundle exec install
+  134  bundle exec
+  135  rake
+  136  rvm
+  137  bundle exec install
+  138  sudo bundle exec install
+  139  bundle update
+  140  git status
+  141  add .
+  142  git add .
+  143  git status
+  144  rake secret
+  145  cd ..
+  146  rails new gesund-jetzt_2.0 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+  147  rails new gesund-jetzt_2.0 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+  148  rails new gesund-jetzt_2.0 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb -T
+  149  rails -v
+  150  git clone https://github.com/RailsApps/rails-stripe-membership-saas.git
+  151  git clone https://github.com/RailsApps/rails-stripe-membership-saas.git
+  152  git clone https://github.com/RailsApps/rails-stripe-membership-saas.git
+  153  git clone git://github.com/RailsApps/rails-stripe-membership-saas.git
+  154  cd Sites/Rails\ Projects/rails-stripe-membership-saas
+  155  ls
+  156  git status
+  157  git status
+  158  git add .
+  159  git status
+  160  git commit -m "Initial commit"
+  161  git status
+  162  git remote add origin https://github.com/ulikimmich/gesund-jetzt-cc.git
+  163  git remote set-url origin  https://github.com/ulikimmich/gesund-jetzt-cc.git
+  164  git remote
+  165  git push
+  166  git push
+  167  git status
+  168  git remote -v
+  169  git push master
+  170  git remote -v
+  171  git push origin
+  172  git push -u origin master
+  173  git status
+  174  cd /
+  175  ls
+  176  cd Volumes/
+  177  ls
+  178  cd solr0v01
+  179  ls
+  180  ls -l
+  181  cd WESTGATE\ Project\ Presentation/
+  182  ls -l
+  183  sudo chmod 777 4-Assests/
+  184  cd Sites/Rails\ Projects/GVS/
+  185  git status
+  186  git push heroku
+  187  git push heroku
+  188  heroku logs
+  189  clear
+  190  cd Sites
+  191  cd ..
+  192  ls
+  193  cd rails-stripe-membership-saas
+  194  git status
+  195  heroku login
+  196  heroku create
+  197  git push heroku
+  198  git push heroku master
+  199  git push heroku
+  200   bundle exec rake -P
+  201  ruby -v
+  202  heroku run rake db:migrate
+  203  rvm -v
+  204  rvm ruby
+  205  rvm --help
+  206  rvm --ruby
+  207  rvm install
+  208  rvm list
+  209  ssh globalvirtualstudio.com
+  210  ssh globalvirtualstudio.com
+  211  cd Sites/Rails\ Projects/rails-stripe-membership-saas
+  212  rvm install ruby-2.0.0-p353
+  213  clear
+  214  homebrew doctor
+  215  brew doctor
+  216  brew update
+  217  ruby -v
+  218  ruby --version
+  219  rvm use ruby 2.0.0p247
+  220  rvm get stable --auto-dotfiles
+  221  rvm install ruby-2.0.0-p353
+  222  brew install ruby-2.0.0-p353
+  223  xcode-select --install
+  224  brew install ruby-2.0.0-p353
+  225  brew install ruby
+  226  ruby -v
+  227  rvm install ruby-2.0.0-p353
+  228  rvm autolibs show
+  229  rvm autolibs brew
+  230  rvm install ruby-2.0.0-p353
+  231  brew update
+  232  gcc --version
+  233  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+  234   rm -rf /usr/local/Cellar /usr/local/.git
+  235  sudo  rm -rf /usr/local/Cellar /usr/local/.git
+  236  brew cleanup
+  237  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+  238  brew doctor
+  239  brew prune
+  240  brew doctor
+  241  ruby --version
+  242  rvm install ruby 2.0.0
+  243  rvm list rubies
+  244  rvm use 2.0.0 --default
+  245  ruby -v
+  246  rvm list rubies
+  247  bundle install
+  248  gem install pg -v '0.15.1'
+  249  gem install libpq-dev
+  250  gem install pg
+  251  gem install libpq
+  252  gem install pg -- --with-pg-lib=/opt/PostgreSQL/9.1/lib --with-pg-config=/opt/PostgreSQL/9.1/bin/pg_config
+  253  brew install postgresql
+  254  gem install pg
+  255  bundle install
+  256  ruby -v
+  257  rvm list rubies
+  258  bundle exec install
+  259  exec bundle install
+  260  ruby -v
+  261  cd Sites/Rails\ Projects/rails-stripe-membership-saas
+  262  ruby -v
+  263  gem install activerecord-postgresql-adapter
+  264  psql
+  265  ruby -v
+  266  cd Sites/Rails\ Projects/rails-stripe-membership-saas
+  267  ruby -v
+  268  brew doctor
+  269  git status
+  270  git push heroku
+  271  git status
+  272  git status
+  273  git push
+  274  git status
+  275  git push heroku master
+  276  git push heroku master
+  277  git push heroku master
+  278  git push heroku master
+  279  bundle exec install
+  280  bundle install
+  281  bundle install
+  282  ruby -v
+  283  rvm list
+  284  cd Sites/Rails\ Projects/GVS/
+  285  git s
+  286  git status
+  287  ruby --version
+  288  ls
+  289  ls -l
+  290  cd Sites/Rails\ Projects/GVS/
+  291  git status
+  292  git branch
+  293  ls
+  294  git status
+  295  cd Sites/Rails\ Projects/GVS/
+  296  git status
+  297  git branch
+  298  ls
+  299  cd Sites/Rails\ Projects/GVS/
+  300  git branch
+  301  git status
+  302  git config --global color.ui true
+  303  git branch
+  304  git status
+  305  git config --global color.diff auto
+  306  git status
+  307  git config --global color.status auto
+  308  git config --global color.status auto
+  309  git status
+  310  git diff
+  311  git branch
+  312  git config --global color.diff true
+  313  git config --global color.status true
+  314  git status
+  315  cd Sites/Rails\ Projects/GVS/
+  316  git branch
+  317  heroku log
+  318  heroku logs
+  319  cd ..
+  320  cd ..
+  321  cd jira/
+  322  ls
+  323  bin/start-jira.sh
+  324  bin/stop-jira.sh
+  325  cd Sites/Rails\ Projects/GVS/
+  326  say hello
+  327  say uli
+  328  say nico
+  329  say nico is great
+  330  rails destroy active_admin:install
+  331  rails destroy active_admin:install
+  332  git status
+  333  rake routes
+  334  cd Sites/Rails\ Projects/GVS/
+  335  ls
+  336  rails s
+  337  rails server
+  338  magick --version
+  339  rmagick --version
+  340  rmagick
+  341  ls 
+  342  ls -l
+  343  rails --version
+  344  rails server
+  345  rails -server
+  346  ruby --version
+  347  trace
+  348  traceroute
+  349  trace route
+  350  routetrace
+  351  ifconfig
+  352  brew doctor
+  353  brew update
+  354  brew doctor
+  355  cd Sites/Rails\ Projects/GVS/
+  356  rails server
+  357  ifconfig
+  358  rails console
+  359  irb
+  360  ifconfig
+  361  git push heroku
+  362  git push heroku
+  363  heroku pg:reset app-dev
+  364  heroku pg:reset DATABASE
+  365  heroku run rake db:migrate
+  366  heroku logs
+  367  heroku log
+  368  heroku trace
+  369  ls
+  370  heroku addons:add adminium
+  371  heroku log
+  372  heroku logs
+  373  cd Sites/Rails\ Projects/GVS/
+  374  heroku addons:add adminium
+  375  heroku plugins:install git://github.com/isc/heroku-adminium
+  376  heroku adminium
+  377  heroku adminium
+  378  heroku addons:open adminium
+  379  git status
+  380  git push heroku
+  381  git push heroku
+  382  heroku addons:open adminium
+  383  heroku addons:open adminium
+  384  git push heroku
+  385  git status
+  386  git push heroku
+  387  git push heroku
+  388  heroku addons:open adminium
+  389  git push heroku
+  390  heroku run rake db:migrate
+  391  git push heroku
+  392  git push heroku
+  393  heroku run rake db:migrate
+  394  heroku logs
+  395  git push heroku
+  396  git push heroku
+  397  heroku run rake db:migrate
+  398  ls
+  399  cd Sites/Rails\ Projects/GVS/
+  400  git push heroku
+  401  git push heroku
+  402  heroku config:set S3_ACCESS_KEY='AKIAJ3NY7E6P3BBCVG6Q'
+  403  heroku config:set S3_SECRET_KEY='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'
+  404  heroku config:set S3_BUCKET_NAME='gvs-assets'
+  405  git push heroku
+  406  git push heroku
+  407  git push heroku
+  408  git push heroku
+  409  git push heroku
+  410  git push heroku
+  411  git push heroku
+  412  heroku run rake db:migrate
+  413  cd Sites/Rails\ Projects/GVS/
+  414  heroku run rake db:migrate
+  415  cd Sites/Rails\ Projects/GVS/
+  416  git status
+  417  cd Sites/Rails\ Projects/GVS/
+  418  git push heroku
+  419  git status
+  420  cd Sites/Rails\ Projects/GVS/
+  421  git status
+  422  cd Sites/Rails\ Projects/GVS/
+  423  ls
+  424  git
+  425  clr
+  426  clear
+  427  git push heroku
+  428  git push heroku
+  429  df
+  430  df
+  431  df
+  432  pwd
+  433  cd Downloads/
+  434  ls
+  435  ls -ltr
+  436  df
+  437  sudo
+  438  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1M
+  439  dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1M
+  440  dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1m
+  441  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1M
+  442  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1M
+  443  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1m
+  444  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1m
+  445  df
+  446  clear
+  447  df
+  448  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/disk1 bs=1m
+  449  df
+  450  cd /Volumes/UNTITLED/
+  451  ll
+  452  ls
+  453  cd -
+  454  ls 
+  455  df
+  456  df
+  457  df
+  458  df -h
+  459  df
+  460  df -h
+  461  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1 bs=1m
+  462  sudo dd if=FreeBSD-10.0-RELEASE-p7-amd64-memstick.img of=/dev/rdisk1s1 bs=1m
+  463  d
+  464  df
+  465  df -h
+  466  cd /Volumes/what/
+  467  ll
+  468  ls -l
+  469  eject
+  470  ifconfig
+  471  ping yahoo.com
+  472  ping yahoo.com
+  473  ping yahoo.com
+  474  ifconfig
+  475  ping yahoo.com
+  476  ç
+  477  ping gvsi
+  478  ssh 172.16.3.250
+  479  ssh benkim@172.16.3.250
+  480  ping yahoo.com
+  481  reboot
+  482  sudo -i
+  483  git status
+  484  git push heroku
+  485  git status
+  486  cd Sites/Rails\ Projects/GVS/
+  487  git status
+  488  git push heroku
+  489  git push heroku
+  490  git push heroku
+  491  git push heroku
+  492  git push heroku
+  493  git push heroku
+  494  heroku run rake db:migrate
+  495  git push heroku
+  496  git push heroku
+  497  git push heroku
+  498  git push heroku
+  499  git push heroku
+  500  cd Sites/Rails\ Projects/GVS/
+  501  history>history.saved
