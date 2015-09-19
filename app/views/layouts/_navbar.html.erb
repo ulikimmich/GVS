@@ -29,8 +29,8 @@
         <!--<li class="<%= current_page?(partners_path) ? "active" : "" %>"><%=  link_to "Partners", partners_path %></li>-->
         <li class="<%= current_page?(accelerator_path) ? "active" : "" %>"><%=  link_to "Accelerator", "http://www.gvsaccelerator.com" %></li>
       </ul>
-      <!--<ul class="nav navbar-nav navbar-right">
-        <li  class="<%= current_page?(contact_path) ? "active" : "" %>"style="padding-right: 20px"><%= link_to "Contact us", contact_path %></li>-->
+      <ul class="nav navbar-nav navbar-right">
+        <!--<li  class="<%= current_page?(contact_path) ? "active" : "" %>"style="padding-right: 20px"><%= link_to "Contact us", contact_path %></li>-->
         <% if signed_in? %>
 
             <li class="dropdown">
