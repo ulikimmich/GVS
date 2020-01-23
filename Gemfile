@@ -9,7 +9,7 @@ gem 'bcrypt-ruby', '3.0.1'
 gem 'faker'
 gem 'will_paginate', '3.0.4'
 gem 'will_paginate-bootstrap'
-gem "paperclip", "~> 3.0"
+gem "paperclip", "~> 4.3"
 gem 'gmaps4rails'
 gem 'geocoder'
 gem 'aws-sdk'
